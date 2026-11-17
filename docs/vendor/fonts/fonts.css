@@ -1,0 +1,6 @@
+/* Overpass and Overpass Mono (The Overpass Project Authors, SIL Open Font License 1.1), served with the site so no outside font host is contacted. */
+@font-face { font-family: 'Overpass'; font-style: normal; font-weight: 400; font-display: swap; src: url('./overpass-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Overpass'; font-style: normal; font-weight: 600; font-display: swap; src: url('./overpass-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Overpass'; font-style: normal; font-weight: 800; font-display: swap; src: url('./overpass-latin-800-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Overpass Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('./overpass-mono-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Overpass Mono'; font-style: normal; font-weight: 600; font-display: swap; src: url('./overpass-mono-latin-600-normal.woff2') format('woff2'); }

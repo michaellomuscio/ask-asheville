@@ -1,0 +1,253 @@
+{
+ "traffic_counts": [
+  {
+   "label": "I-26 near Henderson County line",
+   "x": 484.8,
+   "z": 14782.1,
+   "aadt": 78500,
+   "year": 2023,
+   "station": "0110000318"
+  },
+  {
+   "label": "I-26 near Madison County line",
+   "x": 1030.4,
+   "z": -21540.1,
+   "aadt": 26500,
+   "year": 2023,
+   "station": "0110000266"
+  },
+  {
+   "label": "I-40 near Haywood County line",
+   "x": -19114.1,
+   "z": 6023.6,
+   "aadt": 57500,
+   "year": 2023,
+   "station": "0110000096"
+  },
+  {
+   "label": "I-40 near Black Mountain / McDowell County line",
+   "x": 24544.2,
+   "z": -2683.9,
+   "aadt": 36000,
+   "year": 2023,
+   "station": "0110000334"
+  },
+  {
+   "label": "I-240 downtown (I-26/I-240 overlap, Bowen Bridge section)",
+   "x": -2186.7,
+   "z": 563.6,
+   "aadt": 91000,
+   "year": 2025,
+   "station": "0110000606"
+  },
+  {
+   "label": "I-240 downtown (Patton Ave to Haywood St)",
+   "x": -1017.7,
+   "z": -20.0,
+   "aadt": 78000,
+   "year": 2023,
+   "station": "0110000600"
+  },
+  {
+   "label": "I-240 downtown (Charlotte St to US 25/Merrimon)",
+   "x": 24.5,
+   "z": -533.7,
+   "aadt": 76000,
+   "year": 2023,
+   "station": "0110000591"
+  },
+  {
+   "label": "US 25 Hendersonville Rd north of the Blue Ridge Parkway",
+   "x": 1991.0,
+   "z": 8225.9,
+   "aadt": 34500,
+   "year": 2024,
+   "station": "0110000417"
+  },
+  {
+   "label": "Tunnel Rd near Asheville Mall",
+   "x": 3268.8,
+   "z": 933.1,
+   "aadt": 26000,
+   "year": 2024,
+   "station": "0110000377"
+  },
+  {
+   "label": "Patton Ave (West Asheville, US 19-23)",
+   "x": -4003.7,
+   "z": 927.6,
+   "aadt": 52000,
+   "year": 2024,
+   "station": "0110000078"
+  },
+  {
+   "label": "Merrimon Ave (US 25 north)",
+   "x": -230.2,
+   "z": -680.1,
+   "aadt": 24500,
+   "year": 2024,
+   "station": "0110000112"
+  },
+  {
+   "label": "Brevard Rd (NC 191) at Tanger Outlets / I-26 Exit 33",
+   "x": -4991.5,
+   "z": 7330.6,
+   "aadt": 24500,
+   "year": 2024,
+   "station": "0110000179"
+  },
+  {
+   "label": "Smokey Park Hwy (US 19-23, Candler/Enka)",
+   "x": -8177.8,
+   "z": 4384.8,
+   "aadt": 29000,
+   "year": 2024,
+   "station": "0110000115"
+  },
+  {
+   "label": "Sweeten Creek Rd (US 25A)",
+   "x": 2822.9,
+   "z": 4605.6,
+   "aadt": 29500,
+   "year": 2024,
+   "station": "0110000207"
+  },
+  {
+   "label": "Long Shoals Rd (NC 146)",
+   "x": -269.1,
+   "z": 12543.1,
+   "aadt": 33500,
+   "year": 2024,
+   "station": "0110000150"
+  },
+  {
+   "label": "I-26 between I-40 (Exit 31) and NC 191 (Exit 33)",
+   "x": -5003.3,
+   "z": 5299.0,
+   "aadt": 76000,
+   "year": 2025,
+   "station": "0110000545"
+  }
+ ],
+ "traffic_counts_source": "NCDOT AADT (annual average daily traffic), via the NCDOT traffic-count service",
+ "ems": {
+  "goal": "Buncombe County EMS goal: arrive within 8 minutes 59 seconds, 90% of the time.",
+  "actual_2016_2022": "2016-2022: 17 min 17 s from 911 call to EMS arrival at the 90th percentile (county study).",
+  "tiered_goals": "Urban: 8-minute travel time at 90%. Suburban: 10-minute travel at 80%. Rural: 12-minute travel at 70%.",
+  "bases_note": "Buncombe County EMS works mostly from fire stations; only EMS 9 (Reynolds) has a confirmed address. Other bases are placed at the fire station in the area the county names and marked approximate."
+ },
+ "nfpa": {
+  "engine_travel_s": 240,
+  "ems_als_travel_s": 480,
+  "call_processing_s": 60,
+  "turnout_fire_s": 80,
+  "turnout_ems_s": 60,
+  "note": "NFPA 1710 benchmarks for career departments: first engine within 4 minutes of travel, ALS within 8."
+ },
+ "hospitals": "Mission Hospital is Western North Carolina's only Level I trauma center (ACS, Dec 2025). The South Asheville ER in Arden is a freestanding emergency department. AdventHealth Weaverville is under construction (2028).",
+ "tourism": {
+  "visitors_2023": 13900000,
+  "overnight_2023": 5000000,
+  "day_trips_2023": 9000000,
+  "hotel_rooms_2025": "just under 10,000 per night",
+  "vacation_rentals_2025": "about 8,000",
+  "note": "Record 13.9 million visitors in 2023 (Explore Asheville). Hurricane Helene (Sept 2024) cut 2024-25 spending; October leaf season remains the peak."
+ },
+ "leaf_peak": "Asheville (about 2,100 ft) peaks in the third to fourth week of October; Craggy Gardens and the highest peaks color in early to mid October, and color moves downhill roughly 1,000 ft every 7-10 days.",
+ "congestion": {
+  "tti_delay_hours_2024": 52,
+  "note": "Texas A&M Urban Mobility Report: about 52 hours of delay per auto commuter in 2024."
+ },
+ "projects_2026": [
+  {
+   "name": "I-26 Connector (Asheville)",
+   "status": "Groundbreaking Apr 23, 2026. About $1.8B, design-build (Archer-Wright JV). Completion late 2031 (NCDOT page: Oct 2031). Year-one traffic impacts expected to be minimal apart from ramps already closed near the Jeff Bowen Bridge. Section C (I-40 interchanges with Smokey Park Hwy, I-26/I-240 and Brevard Rd) was being reprioritized for funding, schedule not final. Will separate interstate from local traffic on the Patton Ave / Bowen Bridge corridor and build a new French Broad crossing north to US 19/23/70.",
+   "sources": [
+    "https://www.bpr.org/growth-development/2026-04-24/ncdot-breaks-ground-on-long-awaited-interstate-26-connector-project-in-asheville",
+    "https://www.ncdot.gov/projects/asheville-i-26-connector/Pages/default.aspx"
+   ]
+  },
+  {
+   "name": "I-26 widening, Asheville (I-40) to Hendersonville",
+   "status": "July 17, 2026: all 4 westbound lanes open in final configuration from US 64 (Exit 49) to Brevard Rd (Exit 33). A short eastbound section is still 2 lanes. About 6 months of work remain west of the Blue Ridge Parkway bridge, with overnight closures for diamond grinding and markings. New Exit 35 (to Frederick Law Olmsted Way, built for the Pratt & Whitney plant) is due by end of 2026. Buncombe section completion: 'expected January 2027' (Jan 2026 report); NCDOT's June 2025 contract date was July 1, 2027. The Henderson County section is functionally complete.",
+   "sources": [
+    "https://wlos.com/news/local/i26-widening-project-westbound-lanes-open-asheville-henderson-buncombe-us-64-brevard-road-nc-department-transportation",
+    "https://www.ashevilledailyplanet.com/news/7533-i-26-widening-project-completition-date-changed-again-new-finish-date-expected-in-january-2027",
+    "https://avlwatchdog.org/opinion-enjoying-the-i-26-widening-project-great-because-it-wont-be-over-until-july-2027-if-it-stays-on-schedule/",
+    "https://www.hendersonvillelightning.com/news/14982-with-opening-of-new-lanes-i-26-in-county-is-functionally-complete.html"
+   ]
+  },
+  {
+   "name": "Helene road closures (2026)",
+   "status": "NCDOT (July 31, 2026): more than 99% of Helene-damaged roads have reopened. I found no specific Buncombe road still closed. The big remaining closures are outside the county but shape regional routing: (1) I-40 Pigeon River Gorge (Haywood County, toward Tennessee) runs one lane each way; $2.8B rebuild, target 2 EB + 1 WB lanes by late 2028 and completion late 2029; a 35 mph limit was reported. (2) Hickory Nut Gorge, US 64/US 74A toward Chimney Rock/Lake Lure, permanent repairs to 2029. (3) US 176 Saluda\u2013Tryon closed until late 2029. All Blue Ridge Parkway sections in Buncombe were open as of Oct 6, 2026.",
+   "sources": [
+    "https://www.bpr.org/helene-recovery/2026-07-31/more-than-99-of-roads-damaged-by-helene-have-reopened-ncdot-says",
+    "https://www.wunc.org/2026-09-03/2-8-billion-pigeon-river-gorge-i-40-repairs-nearly-triple-original-estimate",
+    "https://www.nps.gov/blri/planyourvisit/roadclosures.htm"
+   ]
+  }
+ ],
+ "venues": [
+  {
+   "name": "HomeTrust Park (formerly McCormick Field) - Asheville Tourists",
+   "capacity": "4,000 seats (renovation architect EwingCole; Wikipedia lists the same, uncited)",
+   "typical_event_times": "2026 pattern (July series vs Winston-Salem): Wed\u2013Fri 6:35 pm, Sat 6:05 pm, Sun 1:05 pm. BPR also notes a 6:35 pm standard. Times vary by series; season runs about April\u2013September (2026 home opener Apr 21).",
+   "parking": "Very limited on-site parking. About 50 pass-holder spaces at Memorial Stadium lot above the park. Main option is Ironwood Parking Garage (45 Federal Alley, behind Swannanoa Cleaners on Coxe Ave), 0.4 mi away, $2/hr, with a free Gray Line trolley shuttle from 60 min before first pitch until the game ends."
+  },
+  {
+   "name": "The Orange Peel",
+   "capacity": "1,050 standing, general admission (venue tech page). Wikipedia says a 2009 expansion brought it to 1,100.",
+   "typical_event_times": "Most shows: doors 7 pm, show 8 pm; some doors 6 pm, show 7 pm (October 2026 calendar). Box office opens 4 pm on show days.",
+   "parking": null
+  },
+  {
+   "name": "Hellbender by the Orange Peel (NEW outdoor amphitheater)",
+   "capacity": "About 6,000 (lawn plus premium/standard seating)",
+   "typical_event_times": "Limited 2026 season (first concert Aug 1, 2026) running to October; full season from spring 2027. Shows must end by 10 pm. Example: Oct 14, 2026 show had doors 4:30 pm, show 6 pm.",
+   "parking": "Shuttles from Asheville Mall (lower level of the former JCPenney), about 10 minutes each way. Private lots nearby $15\u201330. In July 2026, pedestrians walking Swannanoa River Rd after dark needed APD and traffic-control help."
+  },
+  {
+   "name": "Harrah's Cherokee Center Asheville (ExploreAsheville.com Arena + Thomas Wolfe Auditorium)",
+   "capacity": "ExploreAsheville.com Arena: 'up to 7,200 depending on event set up' (floor max 2,645, balcony max 3,623) per the venue site; Wikipedia gives 7,674. Thomas Wolfe Auditorium: 2,431 seats (home of the Asheville Symphony). Banquet Hall: 420. Exhibition Hall: 25,148 sq ft.",
+   "typical_event_times": "Varies by event; schedule not compiled.",
+   "parking": null
+  },
+  {
+   "name": "Biltmore Estate",
+   "capacity": "8,000-acre estate. Main lots near the house: A and B (8\u201310 min walk), C (RV), E (park-and-ride with shuttle). No published vehicle capacity found.",
+   "typical_event_times": "Daytime admission plus Candlelight Christmas Evenings, Nov 3, 2026\u2013Jan 9, 2027 (Biltmore tickets page; some secondary sources say through Jan 10). Evening entry times not listed on the tickets page.",
+   "parking": null
+  },
+  {
+   "name": "The North Carolina Arboretum - Winter Lights",
+   "capacity": "434-acre grounds. Winter Lights is about a 1-mile walk; tickets are sold per vehicle with timed entry.",
+   "typical_event_times": "Winter Lights Nov 13, 2026\u2013Jan 3, 2027, 6\u201310 pm nightly; historical entry slots at 6, 7 and 8 pm. Normal hours: Apr\u2013Oct 8am\u20139pm, Nov\u2013Mar 8am\u20137pm; $25/vehicle parking.",
+   "parking": null
+  },
+  {
+   "name": "The Omni Grove Park Inn",
+   "capacity": "513 guest rooms (Wikipedia)",
+   "typical_event_times": "National Gingerbread House Competition display runs November into early January; visitor counts not found.",
+   "parking": null
+  },
+  {
+   "name": "Asheville Mall",
+   "capacity": "Largest mall in WNC. Size quoted from about 974,000 to 1.26M sq ft; about 99\u2013130 stores. Anchors: Belk and two Dillard's. JCPenney closed May 2025; former Sears vacant (Wikipedia).",
+   "typical_event_times": "Retail hours not compiled.",
+   "parking": null
+  },
+  {
+   "name": "Tanger Outlets Asheville (formerly Asheville Outlets)",
+   "capacity": "About 382,000 sq ft open-air center with about 70 stores",
+   "typical_event_times": null,
+   "parking": null
+  },
+  {
+   "name": "Blue Ridge Parkway - Buncombe County access points",
+   "capacity": null,
+   "typical_event_times": null,
+   "parking": null
+  }
+ ],
+ "sources_file": "pipeline/research/buncombe_facts.json"
+}

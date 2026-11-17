@@ -1,0 +1,1096 @@
+{
+ "days": {
+  "saturday": {
+   "day": "saturday",
+   "scenario": "saturday",
+   "date": "2026-09-12",
+   "sample": 0.5,
+   "hours": [
+    0,
+    24
+   ],
+   "wallSeconds": 1142,
+   "vehicleTrips": 681558,
+   "vehicleKmTraveled": 12057281,
+   "peakActiveVehicles": 25654,
+   "peakAt": "15:12",
+   "avgTripMin": 21,
+   "avgFreeFlowMin": 20.1,
+   "lifted": 54,
+   "rerouted": 1257,
+   "droppedNoRoom": 110,
+   "demand": {
+    "commuters": 20614,
+    "schoolTrips": 0,
+    "visitorTrips": 78983,
+    "eventTrips": 0,
+    "toursPerDay": 199362,
+    "freightPerDay": 17000,
+    "scheduled": 68286,
+    "dayType": "saturday"
+   },
+   "hourly": [
+    {
+     "hour": 0,
+     "active": 0,
+     "kmh": 0,
+     "stopped": 0,
+     "completed": 0,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 1,
+     "active": 598,
+     "kmh": 73,
+     "stopped": 1.7,
+     "completed": 1400,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 2,
+     "active": 464,
+     "kmh": 71,
+     "stopped": 1.7,
+     "completed": 3260,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 3,
+     "active": 526,
+     "kmh": 73,
+     "stopped": 0.8,
+     "completed": 4876,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 4,
+     "active": 470,
+     "kmh": 73.3,
+     "stopped": 0.4,
+     "completed": 6324,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 5,
+     "active": 490,
+     "kmh": 74.6,
+     "stopped": 1.6,
+     "completed": 7770,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 6,
+     "active": 1044,
+     "kmh": 72,
+     "stopped": 1.9,
+     "completed": 10180,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 7,
+     "active": 2660,
+     "kmh": 70,
+     "stopped": 1.9,
+     "completed": 16574,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 8,
+     "active": 4540,
+     "kmh": 69.1,
+     "stopped": 1.3,
+     "completed": 29906,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 9,
+     "active": 7158,
+     "kmh": 67.2,
+     "stopped": 1.4,
+     "completed": 50500,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 10,
+     "active": 11786,
+     "kmh": 61.4,
+     "stopped": 2.9,
+     "completed": 84010,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 11,
+     "active": 16320,
+     "kmh": 52.4,
+     "stopped": 7.2,
+     "completed": 128124,
+     "lifted": 0,
+     "noRoom": 6
+    },
+    {
+     "hour": 12,
+     "active": 18478,
+     "kmh": 48.4,
+     "stopped": 10.3,
+     "completed": 179878,
+     "lifted": 0,
+     "noRoom": 18
+    },
+    {
+     "hour": 13,
+     "active": 23272,
+     "kmh": 41.2,
+     "stopped": 16.6,
+     "completed": 234780,
+     "lifted": 3,
+     "noRoom": 21
+    },
+    {
+     "hour": 14,
+     "active": 25312,
+     "kmh": 41.5,
+     "stopped": 15.4,
+     "completed": 293980,
+     "lifted": 4,
+     "noRoom": 26
+    },
+    {
+     "hour": 15,
+     "active": 25446,
+     "kmh": 38.8,
+     "stopped": 22.7,
+     "completed": 353210,
+     "lifted": 19,
+     "noRoom": 49
+    },
+    {
+     "hour": 16,
+     "active": 24592,
+     "kmh": 41.6,
+     "stopped": 15.6,
+     "completed": 410136,
+     "lifted": 54,
+     "noRoom": 79
+    },
+    {
+     "hour": 17,
+     "active": 20436,
+     "kmh": 46.6,
+     "stopped": 11.2,
+     "completed": 466028,
+     "lifted": 54,
+     "noRoom": 107
+    },
+    {
+     "hour": 18,
+     "active": 16822,
+     "kmh": 55.5,
+     "stopped": 4.2,
+     "completed": 517122,
+     "lifted": 54,
+     "noRoom": 110
+    },
+    {
+     "hour": 19,
+     "active": 12840,
+     "kmh": 61.2,
+     "stopped": 2.7,
+     "completed": 565190,
+     "lifted": 54,
+     "noRoom": 110
+    },
+    {
+     "hour": 20,
+     "active": 9130,
+     "kmh": 65.7,
+     "stopped": 1.9,
+     "completed": 603590,
+     "lifted": 54,
+     "noRoom": 110
+    },
+    {
+     "hour": 21,
+     "active": 7650,
+     "kmh": 65.1,
+     "stopped": 2.6,
+     "completed": 633622,
+     "lifted": 54,
+     "noRoom": 110
+    },
+    {
+     "hour": 22,
+     "active": 5414,
+     "kmh": 68.2,
+     "stopped": 1.1,
+     "completed": 657192,
+     "lifted": 54,
+     "noRoom": 110
+    },
+    {
+     "hour": 23,
+     "active": 3444,
+     "kmh": 68.4,
+     "stopped": 1.4,
+     "completed": 671934,
+     "lifted": 54,
+     "noRoom": 110
+    },
+    {
+     "hour": 0,
+     "active": 2306,
+     "kmh": 69.9,
+     "stopped": 1.1,
+     "completed": 2,
+     "lifted": 54,
+     "noRoom": 110
+    }
+   ],
+   "congested8am": [
+    {
+     "road": "New Airport Road (NC 280)",
+     "km": 2.7,
+     "ratio": 1.26
+    },
+    {
+     "road": "Airport Road (NC 280)",
+     "km": 5,
+     "ratio": 1.23
+    },
+    {
+     "road": "Woodfin Street",
+     "km": 1,
+     "ratio": 1.22
+    },
+    {
+     "road": "Hendersonville Road (NC 81)",
+     "km": 0.9,
+     "ratio": 1.21
+    },
+    {
+     "road": "Patton Avenue",
+     "km": 2.7,
+     "ratio": 1.19
+    },
+    {
+     "road": "Fairview Road (US 74A)",
+     "km": 2.1,
+     "ratio": 1.19
+    },
+    {
+     "road": "Johnston School Road",
+     "km": 0.8,
+     "ratio": 1.18
+    },
+    {
+     "road": "Biltmore Avenue",
+     "km": 3.5,
+     "ratio": 1.18
+    },
+    {
+     "road": "Patton Avenue (US 19 / US 23 / US 74A)",
+     "km": 8.5,
+     "ratio": 1.17
+    },
+    {
+     "road": "Wiggins Road (NC 1200)",
+     "km": 1.2,
+     "ratio": 1.17
+    },
+    {
+     "road": "South Lexington Avenue",
+     "km": 1.1,
+     "ratio": 1.16
+    },
+    {
+     "road": "South Tunnel Road (US 74A)",
+     "km": 1.9,
+     "ratio": 1.14
+    }
+   ],
+   "congested5pm": [
+    {
+     "road": "Acton Circle",
+     "km": 1.7,
+     "ratio": 4.19
+    },
+    {
+     "road": "Billy Graham Freeway (I 26 / I 240)",
+     "km": 7.8,
+     "ratio": 3.88
+    },
+    {
+     "road": "Billy Graham Freeway (I 26 / I 240 / US 19 / US 23 / US 74A)",
+     "km": 1.6,
+     "ratio": 3.69
+    },
+    {
+     "road": "Billy Graham Freeway (I 26 / I 240 / US 19 BUS / US 23 BUS)",
+     "km": 2.3,
+     "ratio": 3.46
+    },
+    {
+     "road": "Westwood Place",
+     "km": 2.5,
+     "ratio": 2.68
+    },
+    {
+     "road": "Clingman Avenue",
+     "km": 2,
+     "ratio": 2.21
+    },
+    {
+     "road": "Hilliard Avenue",
+     "km": 2.6,
+     "ratio": 2.2
+    },
+    {
+     "road": "Patton Avenue",
+     "km": 2.7,
+     "ratio": 2.04
+    },
+    {
+     "road": "Andrew Jackson Highway (I 40 / US 74 / US 64 Truck)",
+     "km": 34.9,
+     "ratio": 1.91
+    },
+    {
+     "road": "Andrew Jackson Highway (I 26 / US 74 / US 64 Truck)",
+     "km": 38.7,
+     "ratio": 1.72
+    },
+    {
+     "road": "Haywood Street",
+     "km": 2,
+     "ratio": 1.68
+    },
+    {
+     "road": "Smokey Park Highway (US 19 / US 23 / US 74A)",
+     "km": 3.5,
+     "ratio": 1.6
+    }
+   ],
+   "stations": [
+    {
+     "name": "I-26 near Henderson County line",
+     "aadt": 78500,
+     "aadtYear": 2023,
+     "simDaily": 77664,
+     "simPeakHour": 5844,
+     "edges": 2
+    },
+    {
+     "name": "I-26 near Madison County line",
+     "aadt": 26500,
+     "aadtYear": 2023,
+     "simDaily": 24120,
+     "simPeakHour": 2014,
+     "edges": 2
+    },
+    {
+     "name": "I-40 near Haywood County line",
+     "aadt": 57500,
+     "aadtYear": 2023,
+     "simDaily": 51386,
+     "simPeakHour": 4416,
+     "edges": 2
+    },
+    {
+     "name": "I-40 near Black Mountain / McDowell County line",
+     "aadt": 36000,
+     "aadtYear": 2023,
+     "simDaily": 28534,
+     "simPeakHour": 2526,
+     "edges": 2
+    },
+    {
+     "name": "I-240 downtown (I-26/I-240 overlap, Bowen Bridge section)",
+     "aadt": 91000,
+     "aadtYear": 2025,
+     "simDaily": 96680,
+     "simPeakHour": 7428,
+     "edges": 2
+    },
+    {
+     "name": "I-240 downtown (Patton Ave to Haywood St)",
+     "aadt": 78000,
+     "aadtYear": 2023,
+     "simDaily": 75762,
+     "simPeakHour": 6092,
+     "edges": 2
+    },
+    {
+     "name": "I-240 downtown (Charlotte St to US 25/Merrimon)",
+     "aadt": 76000,
+     "aadtYear": 2023,
+     "simDaily": 73838,
+     "simPeakHour": 5688,
+     "edges": 2
+    },
+    {
+     "name": "US 25 Hendersonville Rd north of the Blue Ridge Parkway",
+     "aadt": 34500,
+     "aadtYear": 2024,
+     "simDaily": 31370,
+     "simPeakHour": 3316,
+     "edges": 2
+    },
+    {
+     "name": "Tunnel Rd near Asheville Mall",
+     "aadt": 26000,
+     "aadtYear": 2024,
+     "simDaily": 23952,
+     "simPeakHour": 2216,
+     "edges": 2
+    },
+    {
+     "name": "Patton Ave (West Asheville, US 19-23)",
+     "aadt": 52000,
+     "aadtYear": 2024,
+     "simDaily": 45846,
+     "simPeakHour": 4792,
+     "edges": 2
+    },
+    {
+     "name": "Merrimon Ave (US 25 north)",
+     "aadt": 24500,
+     "aadtYear": 2024,
+     "simDaily": 12378,
+     "simPeakHour": 1244,
+     "edges": 2
+    },
+    {
+     "name": "Brevard Rd (NC 191) at Tanger Outlets / I-26 Exit 33",
+     "aadt": 24500,
+     "aadtYear": 2024,
+     "simDaily": 18460,
+     "simPeakHour": 1816,
+     "edges": 2
+    },
+    {
+     "name": "Smokey Park Hwy (US 19-23, Candler/Enka)",
+     "aadt": 29000,
+     "aadtYear": 2024,
+     "simDaily": 18754,
+     "simPeakHour": 1696,
+     "edges": 2
+    },
+    {
+     "name": "Sweeten Creek Rd (US 25A)",
+     "aadt": 29500,
+     "aadtYear": 2024,
+     "simDaily": 31842,
+     "simPeakHour": 3274,
+     "edges": 2
+    },
+    {
+     "name": "Long Shoals Rd (NC 146)",
+     "aadt": 33500,
+     "aadtYear": 2024,
+     "simDaily": 30826,
+     "simPeakHour": 2692,
+     "edges": 2
+    },
+    {
+     "name": "Extra: I-26 between I-40 (Exit 31) and NC 191 (Exit 33)",
+     "aadt": 76000,
+     "aadtYear": 2025,
+     "simDaily": 87350,
+     "simPeakHour": 6744,
+     "edges": 2
+    }
+   ],
+   "toDowntownAt8am": {
+    "South Asheville (Biltmore Park)": {
+     "freeFlowMin": 18.2,
+     "at8amMin": 23.1
+    },
+    "West Asheville (Haywood Rd)": {
+     "freeFlowMin": 4.3,
+     "at8amMin": 6
+    },
+    "North Asheville (UNCA)": {
+     "freeFlowMin": 6.9,
+     "at8amMin": 7.6
+    },
+    "Weaverville": {
+     "freeFlowMin": 14.6,
+     "at8amMin": 21.6
+    },
+    "Black Mountain": {
+     "freeFlowMin": 21.2,
+     "at8amMin": 25.9
+    },
+    "Candler / Enka": {
+     "freeFlowMin": 14.1,
+     "at8amMin": 23.8
+    },
+    "Arden (Airport Rd)": {
+     "freeFlowMin": 23.7,
+     "at8amMin": 30.6
+    },
+    "Fairview": {
+     "freeFlowMin": 22.4,
+     "at8amMin": 25.1
+    }
+   }
+  },
+  "weekday": {
+   "day": "weekday",
+   "scenario": "weekday",
+   "date": "2026-10-14",
+   "sample": 0.5,
+   "hours": [
+    0,
+    24
+   ],
+   "wallSeconds": 1331,
+   "vehicleTrips": 784070,
+   "vehicleKmTraveled": 13886255,
+   "peakActiveVehicles": 24642,
+   "peakAt": "17:36",
+   "avgTripMin": 20.8,
+   "avgFreeFlowMin": 20.2,
+   "lifted": 16,
+   "rerouted": 816,
+   "droppedNoRoom": 243,
+   "demand": {
+    "commuters": 79342,
+    "schoolTrips": 41028,
+    "visitorTrips": 58804,
+    "eventTrips": 0,
+    "toursPerDay": 177809,
+    "freightPerDay": 46000,
+    "scheduled": 194900,
+    "dayType": "weekday"
+   },
+   "hourly": [
+    {
+     "hour": 0,
+     "active": 0,
+     "kmh": 0,
+     "stopped": 0,
+     "completed": 0,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 1,
+     "active": 454,
+     "kmh": 74.3,
+     "stopped": 0,
+     "completed": 950,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 2,
+     "active": 400,
+     "kmh": 76.3,
+     "stopped": 1,
+     "completed": 2154,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 3,
+     "active": 360,
+     "kmh": 71.1,
+     "stopped": 1.1,
+     "completed": 3230,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 4,
+     "active": 702,
+     "kmh": 74,
+     "stopped": 1.4,
+     "completed": 4428,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 5,
+     "active": 798,
+     "kmh": 73.7,
+     "stopped": 0.5,
+     "completed": 6940,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 6,
+     "active": 2290,
+     "kmh": 69.8,
+     "stopped": 2.4,
+     "completed": 11794,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 7,
+     "active": 7130,
+     "kmh": 66.4,
+     "stopped": 2.4,
+     "completed": 27592,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 8,
+     "active": 17928,
+     "kmh": 49.4,
+     "stopped": 9.6,
+     "completed": 71486,
+     "lifted": 0,
+     "noRoom": 0
+    },
+    {
+     "hour": 9,
+     "active": 14164,
+     "kmh": 54.1,
+     "stopped": 8.5,
+     "completed": 120648,
+     "lifted": 0,
+     "noRoom": 10
+    },
+    {
+     "hour": 10,
+     "active": 14806,
+     "kmh": 54.8,
+     "stopped": 5.3,
+     "completed": 163336,
+     "lifted": 0,
+     "noRoom": 25
+    },
+    {
+     "hour": 11,
+     "active": 16470,
+     "kmh": 51.3,
+     "stopped": 8.9,
+     "completed": 208034,
+     "lifted": 0,
+     "noRoom": 40
+    },
+    {
+     "hour": 12,
+     "active": 15790,
+     "kmh": 52.7,
+     "stopped": 8.5,
+     "completed": 256074,
+     "lifted": 0,
+     "noRoom": 42
+    },
+    {
+     "hour": 13,
+     "active": 16970,
+     "kmh": 51.4,
+     "stopped": 9.8,
+     "completed": 306912,
+     "lifted": 0,
+     "noRoom": 42
+    },
+    {
+     "hour": 14,
+     "active": 18356,
+     "kmh": 51,
+     "stopped": 8.9,
+     "completed": 360226,
+     "lifted": 3,
+     "noRoom": 42
+    },
+    {
+     "hour": 15,
+     "active": 23414,
+     "kmh": 47.6,
+     "stopped": 8.6,
+     "completed": 420694,
+     "lifted": 4,
+     "noRoom": 48
+    },
+    {
+     "hour": 16,
+     "active": 23056,
+     "kmh": 45.4,
+     "stopped": 14.1,
+     "completed": 485612,
+     "lifted": 4,
+     "noRoom": 169
+    },
+    {
+     "hour": 17,
+     "active": 24080,
+     "kmh": 43,
+     "stopped": 17.4,
+     "completed": 542362,
+     "lifted": 4,
+     "noRoom": 202
+    },
+    {
+     "hour": 18,
+     "active": 24062,
+     "kmh": 44.2,
+     "stopped": 12.3,
+     "completed": 599112,
+     "lifted": 7,
+     "noRoom": 239
+    },
+    {
+     "hour": 19,
+     "active": 20226,
+     "kmh": 48.1,
+     "stopped": 13.3,
+     "completed": 654348,
+     "lifted": 13,
+     "noRoom": 243
+    },
+    {
+     "hour": 20,
+     "active": 11496,
+     "kmh": 60.3,
+     "stopped": 2.9,
+     "completed": 701060,
+     "lifted": 16,
+     "noRoom": 243
+    },
+    {
+     "hour": 21,
+     "active": 8448,
+     "kmh": 66.1,
+     "stopped": 1.8,
+     "completed": 734544,
+     "lifted": 16,
+     "noRoom": 243
+    },
+    {
+     "hour": 22,
+     "active": 5684,
+     "kmh": 68.3,
+     "stopped": 1.7,
+     "completed": 759376,
+     "lifted": 16,
+     "noRoom": 243
+    },
+    {
+     "hour": 23,
+     "active": 3704,
+     "kmh": 69.4,
+     "stopped": 1.3,
+     "completed": 774668,
+     "lifted": 16,
+     "noRoom": 243
+    },
+    {
+     "hour": 0,
+     "active": 2134,
+     "kmh": 72.1,
+     "stopped": 0.9,
+     "completed": 0,
+     "lifted": 16,
+     "noRoom": 243
+    }
+   ],
+   "congested8am": [
+    {
+     "road": "Acton Circle",
+     "km": 1.7,
+     "ratio": 3.1
+    },
+    {
+     "road": "I 26 / US 19 / US 23 / US 70",
+     "km": 13.2,
+     "ratio": 2.57
+    },
+    {
+     "road": "Biltmore Avenue",
+     "km": 3.5,
+     "ratio": 2.51
+    },
+    {
+     "road": "McIntosh Road",
+     "km": 2.2,
+     "ratio": 1.99
+    },
+    {
+     "road": "Old Burnsville Hill Road",
+     "km": 0.9,
+     "ratio": 1.95
+    },
+    {
+     "road": "US 70",
+     "km": 3.2,
+     "ratio": 1.79
+    },
+    {
+     "road": "Smokey Park Highway (US 19 / US 23 / US 74A)",
+     "km": 3.5,
+     "ratio": 1.68
+    },
+    {
+     "road": "Lees Creek Road",
+     "km": 5.4,
+     "ratio": 1.64
+    },
+    {
+     "road": "Long Shoals Road (NC 146)",
+     "km": 10.3,
+     "ratio": 1.48
+    },
+    {
+     "road": "Smokey Park Highway (US 19 / US 23)",
+     "km": 23.7,
+     "ratio": 1.47
+    },
+    {
+     "road": "Wiggins Road (NC 1200)",
+     "km": 1.2,
+     "ratio": 1.43
+    },
+    {
+     "road": "Andrew Jackson Highway (I 26 / US 74 / US 64 Truck)",
+     "km": 38.7,
+     "ratio": 1.42
+    }
+   ],
+   "congested5pm": [
+    {
+     "road": "US 74 / US 64 Truck",
+     "km": 2.1,
+     "ratio": 5.12
+    },
+    {
+     "road": "Billy Graham Freeway (I 26 / I 240 / US 19 / US 23 / US 74A)",
+     "km": 1.6,
+     "ratio": 4.39
+    },
+    {
+     "road": "Hilliard Avenue",
+     "km": 2.6,
+     "ratio": 3.39
+    },
+    {
+     "road": "Patton Avenue",
+     "km": 2.7,
+     "ratio": 3.04
+    },
+    {
+     "road": "Haywood Street",
+     "km": 2,
+     "ratio": 2.77
+    },
+    {
+     "road": "Asheland Avenue",
+     "km": 1.9,
+     "ratio": 2.6
+    },
+    {
+     "road": "Clingman Avenue",
+     "km": 2,
+     "ratio": 2.6
+    },
+    {
+     "road": "Pearl Street",
+     "km": 0.9,
+     "ratio": 2.45
+    },
+    {
+     "road": "Billy Graham Freeway (I 26 / I 240 / US 19 BUS / US 23 BUS)",
+     "km": 2.3,
+     "ratio": 2.44
+    },
+    {
+     "road": "Westwood Place",
+     "km": 2.5,
+     "ratio": 2.42
+    },
+    {
+     "road": "Hendersonville Road (NC 81)",
+     "km": 0.9,
+     "ratio": 2.27
+    },
+    {
+     "road": "Andrew Jackson Highway (I 26 / US 74 / US 64 Truck)",
+     "km": 38.7,
+     "ratio": 2.22
+    }
+   ],
+   "stations": [
+    {
+     "name": "I-26 near Henderson County line",
+     "aadt": 78500,
+     "aadtYear": 2023,
+     "simDaily": 87156,
+     "simPeakHour": 6138,
+     "edges": 2
+    },
+    {
+     "name": "I-26 near Madison County line",
+     "aadt": 26500,
+     "aadtYear": 2023,
+     "simDaily": 25884,
+     "simPeakHour": 1986,
+     "edges": 2
+    },
+    {
+     "name": "I-40 near Haywood County line",
+     "aadt": 57500,
+     "aadtYear": 2023,
+     "simDaily": 51916,
+     "simPeakHour": 3996,
+     "edges": 2
+    },
+    {
+     "name": "I-40 near Black Mountain / McDowell County line",
+     "aadt": 36000,
+     "aadtYear": 2023,
+     "simDaily": 36170,
+     "simPeakHour": 2868,
+     "edges": 2
+    },
+    {
+     "name": "I-240 downtown (I-26/I-240 overlap, Bowen Bridge section)",
+     "aadt": 91000,
+     "aadtYear": 2025,
+     "simDaily": 110174,
+     "simPeakHour": 7636,
+     "edges": 2
+    },
+    {
+     "name": "I-240 downtown (Patton Ave to Haywood St)",
+     "aadt": 78000,
+     "aadtYear": 2023,
+     "simDaily": 83982,
+     "simPeakHour": 5718,
+     "edges": 2
+    },
+    {
+     "name": "I-240 downtown (Charlotte St to US 25/Merrimon)",
+     "aadt": 76000,
+     "aadtYear": 2023,
+     "simDaily": 82688,
+     "simPeakHour": 5976,
+     "edges": 2
+    },
+    {
+     "name": "US 25 Hendersonville Rd north of the Blue Ridge Parkway",
+     "aadt": 34500,
+     "aadtYear": 2024,
+     "simDaily": 39064,
+     "simPeakHour": 3692,
+     "edges": 2
+    },
+    {
+     "name": "Tunnel Rd near Asheville Mall",
+     "aadt": 26000,
+     "aadtYear": 2024,
+     "simDaily": 27100,
+     "simPeakHour": 2382,
+     "edges": 2
+    },
+    {
+     "name": "Patton Ave (West Asheville, US 19-23)",
+     "aadt": 52000,
+     "aadtYear": 2024,
+     "simDaily": 53948,
+     "simPeakHour": 4774,
+     "edges": 2
+    },
+    {
+     "name": "Merrimon Ave (US 25 north)",
+     "aadt": 24500,
+     "aadtYear": 2024,
+     "simDaily": 13116,
+     "simPeakHour": 1144,
+     "edges": 2
+    },
+    {
+     "name": "Brevard Rd (NC 191) at Tanger Outlets / I-26 Exit 33",
+     "aadt": 24500,
+     "aadtYear": 2024,
+     "simDaily": 21912,
+     "simPeakHour": 1928,
+     "edges": 2
+    },
+    {
+     "name": "Smokey Park Hwy (US 19-23, Candler/Enka)",
+     "aadt": 29000,
+     "aadtYear": 2024,
+     "simDaily": 20476,
+     "simPeakHour": 1848,
+     "edges": 2
+    },
+    {
+     "name": "Sweeten Creek Rd (US 25A)",
+     "aadt": 29500,
+     "aadtYear": 2024,
+     "simDaily": 39066,
+     "simPeakHour": 3184,
+     "edges": 2
+    },
+    {
+     "name": "Long Shoals Rd (NC 146)",
+     "aadt": 33500,
+     "aadtYear": 2024,
+     "simDaily": 35660,
+     "simPeakHour": 2846,
+     "edges": 2
+    },
+    {
+     "name": "Extra: I-26 between I-40 (Exit 31) and NC 191 (Exit 33)",
+     "aadt": 76000,
+     "aadtYear": 2025,
+     "simDaily": 96054,
+     "simPeakHour": 7038,
+     "edges": 2
+    }
+   ],
+   "toDowntownAt8am": {
+    "South Asheville (Biltmore Park)": {
+     "freeFlowMin": 18.2,
+     "at8amMin": 23.1
+    },
+    "West Asheville (Haywood Rd)": {
+     "freeFlowMin": 4.3,
+     "at8amMin": 6
+    },
+    "North Asheville (UNCA)": {
+     "freeFlowMin": 6.9,
+     "at8amMin": 7.6
+    },
+    "Weaverville": {
+     "freeFlowMin": 14.6,
+     "at8amMin": 21.6
+    },
+    "Black Mountain": {
+     "freeFlowMin": 21.2,
+     "at8amMin": 25.9
+    },
+    "Candler / Enka": {
+     "freeFlowMin": 14.1,
+     "at8amMin": 23.8
+    },
+    "Arden (Airport Rd)": {
+     "freeFlowMin": 23.7,
+     "at8amMin": 30.6
+    },
+    "Fairview": {
+     "freeFlowMin": 22.4,
+     "at8amMin": 25.1
+    }
+   }
+  }
+ },
+ "generated": "2026-10-06T22:55:42.224Z",
+ "note": "Simulated with scripts/headless.js; volumes scaled to full demand (sample < 1 scales lane capacity to match)."
+}

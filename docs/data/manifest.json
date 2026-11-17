@@ -1,0 +1,83 @@
+{
+ "built": "2026-10-06T10:14:29",
+ "projection": {
+  "type": "local equirectangular",
+  "lat0": 35.5951,
+  "lon0": -82.551,
+  "m_per_deg_lat": 110951.4878817118,
+  "m_per_deg_lon": 90622.41272676295,
+  "axes": "x east, z south, y up (meters)"
+ },
+ "files": {
+  "addresses.bin.gz": 2006086,
+  "areas.json": 406776,
+  "areas_id.png": 424680,
+  "buildings.bin.gz": 6461768,
+  "county.json": 17474,
+  "demand.bin.gz": 319728,
+  "facts.json": 11575,
+  "ors_reference.json": 208798,
+  "places.json": 26633,
+  "pois.json": 87090,
+  "roads.bin.gz": 5572887,
+  "terrain.bin.gz": 6246562,
+  "typical_saturday.bin.gz": 326194,
+  "typical_summary.json": 20562,
+  "typical_weekday.bin.gz": 345240,
+  "water.bin.gz": 737420
+ },
+ "sources": [
+  {
+   "name": "OpenStreetMap",
+   "use": "roads, buildings, water, rail, points of interest",
+   "license": "ODbL 1.0",
+   "attribution": "\u00a9 OpenStreetMap contributors",
+   "date": "Geofabrik North Carolina extract, 2026-10-05"
+  },
+  {
+   "name": "Buncombe County GIS",
+   "use": "parcel land-use class codes, E911 address points, school attendance districts",
+   "license": "public records (county open data)"
+  },
+  {
+   "name": "U.S. Census Bureau, 2020 Census",
+   "use": "block population, housing units, households, ages (PL 94-171, DHC)",
+   "license": "public domain"
+  },
+  {
+   "name": "U.S. Census Bureau, ACS 2020-2024 5-year",
+   "use": "block group income, education, household size, housing, commuting",
+   "license": "public domain"
+  },
+  {
+   "name": "U.S. Census Bureau, LEHD LODES 8 (2023)",
+   "use": "home-to-work commute flows and jobs by block",
+   "license": "public domain"
+  },
+  {
+   "name": "NCES Common Core of Data 2022-23 and Private School Survey",
+   "use": "school locations, grades and enrollment",
+   "license": "public domain"
+  },
+  {
+   "name": "USGS 3DEP via AWS Terrain Tiles",
+   "use": "elevation",
+   "license": "public domain (attribution: Mapzen/Tilezen, USGS)"
+  },
+  {
+   "name": "MRLC NLCD 2021",
+   "use": "land cover",
+   "license": "public domain"
+  },
+  {
+   "name": "openrouteservice 9.10",
+   "use": "free-flow drive-time calibration and isochrones (run locally)",
+   "license": "GPL-3.0 engine; data \u00a9 OpenStreetMap contributors"
+  }
+ ],
+ "focus": {
+  "name": "Downtown Asheville (Pack Square)",
+  "lat": 35.5951,
+  "lon": -82.551
+ }
+}

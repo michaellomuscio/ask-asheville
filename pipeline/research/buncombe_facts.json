@@ -1,0 +1,2366 @@
+{
+  "_meta": {
+    "compiled": "2026-10-06",
+    "purpose": "Verified reference facts for a 3D traffic/emergency-response simulation of Asheville and Buncombe County, NC",
+    "coordinate_sources": {
+      "county_address_points": "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2 (Buncombe County official address points; coordinate = the county's address point for the listed street address, WGS84). Field coord_source says which source each lat/lon came from.",
+      "nces_edge": "NCES EDGE school geocodes (2023-24 private, 2024-25 public)",
+      "osm": "OpenStreetMap contributors (ODbL) via Overpass API; used only where no official point exists, and flagged approximate",
+      "fdmaps": "https://fdmaps.com/buncombe-county/ (hobbyist aggregator; used only for the airport ARFF station)"
+    },
+    "conventions": "null = not found/unverified. 'verification' fields say how solid each item is. Aggregator-only facts are flagged.",
+    "not_used": "neris.fsri.org (USFA NERIS station pages) was not used: its robots.txt disallows AI agents."
+  },
+  "hospitals_ed": {
+    "open_eds_accepting_911": [
+      {
+        "name": "Mission Hospital (main campus, incl. Mission Children's Hospital)",
+        "operator": "Mission Health / HCA Healthcare (MH Mission Hospital, LLLP)",
+        "address": "509 Biltmore Ave, Asheville, NC 28801",
+        "lat": 35.577677,
+        "lon": -82.549074,
+        "coord_source": "county_address_points",
+        "status_2026": "open",
+        "ed_type": "full hospital ED",
+        "trauma_level": "ACS-verified Level I trauma center (verification announced Dec 3, 2025; ACS survey Sept 2025; 3-year term). Previously Level II since the program began in 1995. Only Level I in WNC, 7th in NC. NC OEMS state designation record not separately checked.",
+        "notes": "Adult ER plus a dedicated pediatric ER (North Tower); Mission Children's Hospital is on the 3rd floor of the main building. ER entrance = Entrance 1 at the main hospital, 24/7. Air medical: Mountain Area Medical Airlift (MAMA). Context: hospital has had repeated CMS 'immediate jeopardy' findings (BPR, Dec 2025). Correction to the brief: Mission is no longer Level II.",
+        "sources": [
+          "https://www.missionhealth.org/locations/mission-hospital",
+          "https://www.missionhealth.org/locations/mission-hospital/for-visitors",
+          "https://www.missionhealth.org/about-us/newsroom/mission-hospital-earns-level-i-trauma-verification-by-american-college-of-surgeons",
+          "https://www.bpr.org/health/2025-12-04/mission-hospital-designated-sole-level-i-trauma-center-in-western-north-carolina",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "name": "Mission Hospital - St. Joseph campus",
+        "operator": "Mission Health / HCA Healthcare",
+        "address": "428 Biltmore Ave, Asheville, NC 28801",
+        "lat": 35.581245,
+        "lon": -82.550128,
+        "coord_source": "county_address_points",
+        "status_2026": "open as a hospital campus (part of Mission Hospital)",
+        "ed_type": "no ED found",
+        "trauma_level": null,
+        "notes": "Mission's official materials list the adult and pediatric ERs only at the main hospital (509 Biltmore Ave); the Mission locations page lists 'South Asheville ER' as the only other ER. One aggregator (Vivian Health) claims an ED here; treat it as unreliable. Do not route 911 ambulances here unless confirmed locally.",
+        "sources": [
+          "https://www.missionhealth.org/locations",
+          "https://www.missionhealth.org/locations/mission-hospital/for-visitors",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "name": "South Asheville ER (Mission Hospital freestanding ED)",
+        "operator": "Mission Health / HCA Healthcare (licensed as part of Mission Hospital)",
+        "address": "2512 Hendersonville Rd, Arden, NC 28704 (corner of Airport Rd and Hendersonville Rd)",
+        "lat": 35.458301,
+        "lon": -82.510872,
+        "coord_source": "county_address_points",
+        "status_2026": "open since November 2024 (opening announced Nov 19, 2024)",
+        "ed_type": "freestanding ED",
+        "trauma_level": "not a trauma center",
+        "notes": "24/7; ~11,000 sq ft; 11 exam rooms (the CON planned 12 treatment rooms incl. 1 trauma/resuscitation room), CT, X-ray, ultrasound, lab. Mission says it gives 'EMS partners a place for critical patients to be stabilized before transport to an inpatient hospital'; actual Buncombe EMS destination rules for this site not verified. CON projected ~9,248 visits in CY2025 and ~10,400 by CY2027. Phone 828-376-7100.",
+        "sources": [
+          "https://www.missionhealth.org/locations/south-asheville-emergency",
+          "https://www.foxcarolina.com/2024/11/19/mission-hospital-opens-new-south-asheville-er-facility-arden/",
+          "https://www.strollmag.com/locations/biltmore-park-nc/articles/-5a577f/",
+          "https://info.ncdhhs.gov/dhsr/coneed/decisions/2022/may/findings/2022-Buncombe-B-12191-22-Mission-Hospital-220170-Findings.pdf",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "name": "Charles George VA Medical Center",
+        "operator": "U.S. Department of Veterans Affairs",
+        "address": "1100 Tunnel Rd, Asheville, NC 28805",
+        "lat": 35.588531,
+        "lon": -82.483299,
+        "coord_source": "county_address_points",
+        "status_2026": "open",
+        "ed_type": "VA, veterans only",
+        "trauma_level": "not a trauma center",
+        "notes": "ED open 24/7 to walk-ins (turn right at the front entrance). Serves WNC, upstate SC, north GA and east TN veterans. How Buncombe EMS chooses this destination for veterans was not verified.",
+        "sources": [
+          "https://www.va.gov/asheville-health-care/locations/charles-george-department-of-veterans-affairs-medical-center/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      }
+    ],
+    "planned_or_not_open": [
+      {
+        "name": "AdventHealth Weaverville (planned hospital)",
+        "operator": "AdventHealth",
+        "address": "Weaverville, off US 25/70 just west of I-26 (no street address published)",
+        "lat": null,
+        "lon": null,
+        "status_2026": "NOT OPEN. Under construction: groundbreaking Mar 26, 2026, after the NC Supreme Court denied Mission's appeal on Dec 15, 2025. Expected opening: end of 2028 (WLOS, Mar 2026); medical office building projected Q4 2027.",
+        "ed_type": "planned full hospital ED (planned ER per Wikipedia; WLOS mentions trauma care)",
+        "notes": "93 acute beds approved (67 + 26), with a further request pending; ~453,000 sq ft, 7 stories; first phase over $250M. Leave it out of a 2026 simulation unless you are modeling the future.",
+        "sources": [
+          "https://wlos.com/news/local/gov-josh-stein-attends-adventhealths-new-hospital-groundbreaking-weaverville-north-carolina",
+          "https://wlos.com/news/ask-13/ask-13-what-is-the-latest-news-new-adventhealth-hospital-weaverville-buncombe-county-court-of-appeals-certificate-of-need-development",
+          "https://en.wikipedia.org/wiki/AdventHealth_Weaverville"
+        ]
+      },
+      {
+        "name": "Mission West Asheville / Candler freestanding ER (planned)",
+        "operator": "Mission Health / HCA",
+        "address": "Crowell Rd near Smokey Park Hwy and I-40, Candler (no street address published)",
+        "lat": null,
+        "lon": null,
+        "status_2026": "NOT OPEN as far as I can verify. CON approval was affirmed Mar 7, 2025, after appeals. It is not on Mission's location list. No opening date found.",
+        "ed_type": "planned freestanding ED (12 rooms, CT, X-ray, ultrasound, lab, 24/7)",
+        "notes": "Originally projected for July 2025.",
+        "sources": [
+          "https://wlos.com/news/local/north-carolina-mission-hospitals-new-er-west-asheville-emergency-room-wait-time-administrative-treatment-certificate-of-need-court-of-appeals",
+          "https://www.missionhealth.org/locations"
+        ]
+      }
+    ],
+    "other_notes": "I found no other ED inside Buncombe County. Urgent-care clinics (e.g., Mission My Care Now, AdventHealth/Pardee urgent cares) are not EDs and were not inventoried. Nearest EDs just outside the county (AdventHealth Hendersonville, Pardee/UNC Health in Henderson County, Haywood Regional, etc.) were not researched."
+  },
+  "fire_stations": {
+    "stations": [
+      {
+        "department": "Asheville Fire Department",
+        "station": "Station 1 (HQ)",
+        "address": "100 Court Plaza, Asheville, NC 28801",
+        "lat": 35.594905,
+        "lon": -82.549978,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "Engine 1",
+          "Ladder 1",
+          "Squad 1",
+          "Chief 9",
+          "Battalion 1"
+        ],
+        "notes": "In the downtown Municipal Building. A restoration project starting summer 2026 reduces AFD presence in the building, but the station stays active.",
+        "verification": "official city station list",
+        "sources": [
+          "https://www.ashevillenc.gov/department/fire/fire-stations/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2",
+          "https://828newsnow.com/news/228822-asheville-police-fire-headquarters-to-remain-open-during-downtown-restoration/"
+        ]
+      },
+      {
+        "department": "Asheville Fire Department",
+        "station": "Station 2",
+        "address": "415 S French Broad Ave, Asheville, NC 28801",
+        "lat": 35.578112,
+        "lon": -82.560318,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "Engine 2",
+          "FM10"
+        ],
+        "notes": null,
+        "verification": "official city station list",
+        "sources": [
+          "https://www.ashevillenc.gov/department/fire/fire-stations/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Asheville Fire Department",
+        "station": "Station 3",
+        "address": "50 Oregon Ave, Asheville, NC 28806",
+        "lat": 35.585259,
+        "lon": -82.591648,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "Rescue 3"
+        ],
+        "notes": null,
+        "verification": "official city station list",
+        "sources": [
+          "https://www.ashevillenc.gov/department/fire/fire-stations/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Asheville Fire Department",
+        "station": "Station 4",
+        "address": "9 Pond St, Arden, NC 28704 (city site)",
+        "lat": 35.4838,
+        "lon": -82.5263,
+        "coord_source": "approximate (county point for 7 Pond St)",
+        "apparatus": [
+          "Engine 4",
+          "Ladder 4"
+        ],
+        "notes": "New station opened May 2022, separate from the Skyland FD station it used to share. The city lists 9 Pond St; RadioReference and older listings give 9 Miller Rd S (Skyland FD HQ next door). The county layer has no '9 Pond St' point, so the coordinates are APPROXIMATE (next to the 7 Pond St point, about 150 m from 9 Miller Rd S).",
+        "verification": "official city address; exact point not in county GIS",
+        "sources": [
+          "https://www.ashevillenc.gov/department/fire/fire-stations/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2",
+          "https://wlos.com/news/local/asheville-fire-department-opens-new-station-miller-road-health-wellbeing-firefighters-top-priority",
+          "https://wiki.radioreference.com/index.php/Buncombe_County_(NC)"
+        ]
+      },
+      {
+        "department": "Asheville Fire Department",
+        "station": "Station 5",
+        "address": "1074 Hendersonville Rd, Asheville, NC 28803",
+        "lat": 35.536827,
+        "lon": -82.528852,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "Quint 5",
+          "Battalion 3"
+        ],
+        "notes": "On US-25 (Hendersonville Rd), about 2 km north of the Blue Ridge Parkway.",
+        "verification": "official city station list",
+        "sources": [
+          "https://www.ashevillenc.gov/department/fire/fire-stations/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Asheville Fire Department",
+        "station": "Station 6",
+        "address": "970 Haywood Rd, Asheville, NC 28806",
+        "lat": 35.580912,
+        "lon": -82.602043,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "Engine 6",
+          "Battalion 2"
+        ],
+        "notes": "Shares the site with the APD West Asheville resource center.",
+        "verification": "official city station list",
+        "sources": [
+          "https://www.ashevillenc.gov/department/fire/fire-stations/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Asheville Fire Department",
+        "station": "Station 7",
+        "address": "37 E Larchmont Rd, Asheville, NC 28804",
+        "lat": 35.622939,
+        "lon": -82.552979,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "Engine 7"
+        ],
+        "notes": null,
+        "verification": "official city station list",
+        "sources": [
+          "https://www.ashevillenc.gov/department/fire/fire-stations/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Asheville Fire Department",
+        "station": "Station 8",
+        "address": "904 Tunnel Rd, Asheville, NC 28805",
+        "lat": 35.587734,
+        "lon": -82.502886,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "Engine 8",
+          "Ladder 8"
+        ],
+        "notes": null,
+        "verification": "official city station list",
+        "sources": [
+          "https://www.ashevillenc.gov/department/fire/fire-stations/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Asheville Fire Department",
+        "station": "Station 9",
+        "address": "749 Fairview Rd, Asheville, NC 28803 (Murphy-Oakley Community Center)",
+        "lat": 35.564217,
+        "lon": -82.513529,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "Engine 9",
+          "Safety 9"
+        ],
+        "notes": "A new Station 9 is planned at 711 Fairview Rd (now the APD Oakley resource center): design through 2026, completion expected 2028. The old station space then becomes the APD East Asheville resource center.",
+        "verification": "official city station list",
+        "sources": [
+          "https://www.ashevillenc.gov/department/fire/fire-stations/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2",
+          "https://www.ashevillenc.gov/news/new-fire-station-coming-to-oakley-public-invited-to-learn-about-and-share-input-on-the-project/"
+        ]
+      },
+      {
+        "department": "Asheville Fire Department",
+        "station": "Station 10",
+        "address": "1903 Old Haywood Rd, Asheville, NC 28806",
+        "lat": 35.564751,
+        "lon": -82.633785,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "Quint 10",
+          "Engine 15",
+          "Safety 10"
+        ],
+        "notes": null,
+        "verification": "official city station list",
+        "sources": [
+          "https://www.ashevillenc.gov/department/fire/fire-stations/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Asheville Fire Department",
+        "station": "Station 11",
+        "address": "7 Rocky Ridge Rd, Asheville, NC 28806",
+        "lat": 35.534126,
+        "lon": -82.604741,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "Engine 11",
+          "Brush 11"
+        ],
+        "notes": null,
+        "verification": "official city station list",
+        "sources": [
+          "https://www.ashevillenc.gov/department/fire/fire-stations/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Asheville Fire Department",
+        "station": "Station 12",
+        "address": "880 New Haw Creek Rd, Asheville, NC 28805",
+        "lat": 35.611116,
+        "lon": -82.501968,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "Tanker 12"
+        ],
+        "notes": null,
+        "verification": "official city station list",
+        "sources": [
+          "https://www.ashevillenc.gov/department/fire/fire-stations/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Asheville Fire Department",
+        "station": "Station 13",
+        "address": "316 Broadway St, Asheville, NC 28801 (Broadway Public Safety Station)",
+        "lat": 35.604193,
+        "lon": -82.5581,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "Engine 13",
+          "RRT6"
+        ],
+        "notes": "Opened Nov–Dec 2023 (about $12M). The building also houses an APD substation and the city Emergency Operations Center.",
+        "verification": "official city station list",
+        "sources": [
+          "https://www.ashevillenc.gov/department/fire/fire-stations/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2",
+          "https://wlos.com/news/local/12-million-broadway-public-safety-building-opens-promising-improved-services-asheville-fire-station-13-leed-certified-project-asheville-mayor-esther-manheimer"
+        ]
+      },
+      {
+        "department": "Skyland Fire & Rescue",
+        "station": "Station 1 (Main)",
+        "address": "9 Miller Rd S, Skyland/Arden, NC (website says 28776; county GIS ZIP 28803)",
+        "lat": 35.484913,
+        "lon": -82.524095,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": null,
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://www.skylandfire.com/station-locations.html",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Skyland Fire & Rescue",
+        "station": "Station 2 (Avery Creek)",
+        "address": "890 Glenn Bridge Rd SE, Arden, NC 28704 (website); county GIS has 899 Glenn Bridge Rd SE",
+        "lat": 35.463822,
+        "lon": -82.574389,
+        "coord_source": "county_address_points (899 Glenn Bridge Rd SE)",
+        "apparatus": null,
+        "notes": "Address numbers conflict (890 vs 899).",
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://www.skylandfire.com/station-locations.html",
+          "https://fdmaps.com/buncombe-county/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Skyland Fire & Rescue",
+        "station": "Station 3 (Bishop)",
+        "address": "310 Williams Rd, Arden, NC 28704",
+        "lat": 35.487257,
+        "lon": -82.479191,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": null,
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://www.skylandfire.com/station-locations.html",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Skyland Fire & Rescue",
+        "station": "Station 4 (Biltmore Forest)",
+        "address": "2 Valley Springs Rd, Biltmore Forest, NC 28803",
+        "lat": 35.5164,
+        "lon": -82.5287,
+        "coord_source": "approximate (county point for 5 Valley Springs Rd)",
+        "apparatus": null,
+        "notes": "Fire protection for the Town of Biltmore Forest. Neither '2' nor '7' (fdmaps) Valley Springs Rd is in county GIS, so the coordinates are approximate.",
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://www.skylandfire.com/station-locations.html",
+          "https://fdmaps.com/buncombe-county/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Black Mountain Fire Department",
+        "station": "Station 1 (HQ, Public Safety Building)",
+        "address": "106 Montreat Rd, Black Mountain, NC 28711",
+        "lat": 35.618974,
+        "lon": -82.320957,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "Engine 4",
+          "Engine 41",
+          "Rescue 4",
+          "Engine 45",
+          "Truck 4",
+          "Squad 4",
+          "Brush 4",
+          "UTV 4",
+          "UTV 42"
+        ],
+        "notes": "IMPORTANT 2026: the building was vacated starting the week of Mar 16, 2026 over structural problems. On-duty firefighters and apparatus now operate from a Presbyterian Church property on Montreat Rd (exact address not published); administration moved to Ridgecrest Conference Center. BMFD also serves the Town of Montreat.",
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://www.townofblackmountain.org/2461/Stations-Apparatus",
+          "https://www.townofblackmountain.org/m/newsflash/Home/Detail/657",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Black Mountain Fire Department",
+        "station": "Station 2",
+        "address": "19 White Pine Dr, Black Mountain, NC 28711",
+        "lat": 35.604793,
+        "lon": -82.335802,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "Engine 42",
+          "Tanker 42"
+        ],
+        "notes": "Staffed 24/7.",
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://www.townofblackmountain.org/2461/Stations-Apparatus",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Black Mountain Fire Department",
+        "station": "Station 3 (Laurel Ridge area)",
+        "address": "51 Wedgewood Terrace, Black Mountain, NC 28711",
+        "lat": 35.668519,
+        "lon": -82.369078,
+        "coord_source": "county_address_points",
+        "apparatus": [],
+        "notes": "Unmanned.",
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://www.townofblackmountain.org/2461/Stations-Apparatus",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "West Buncombe Fire Department",
+        "station": "Station 1 (HQ)",
+        "address": "549 Old County Home Rd, Asheville, NC 28806",
+        "lat": 35.615668,
+        "lon": -82.629348,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": "Opened 2001.",
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://wbfd.org/about/stations/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "West Buncombe Fire Department",
+        "station": "Station 2",
+        "address": "724 Riverview Church Rd, Asheville, NC 28806",
+        "lat": 35.617303,
+        "lon": -82.60139,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": "Opened 2020. First due for French Broad River water rescue. Station 3 (Dix Creek #2 & Piney Mountain Rd) is expected to start construction around 2029.",
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://wbfd.org/about/stations/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Swannanoa Fire & Rescue",
+        "station": "Station 1 (Main)",
+        "address": "103 South Ave, Swannanoa, NC 28778",
+        "lat": 35.598602,
+        "lon": -82.396714,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "engine",
+          "ladder (per dept. description)"
+        ],
+        "notes": null,
+        "verification": "address from dept. site via search; the site could not be fetched (cert error); county point confirmed",
+        "sources": [
+          "http://www.svfd.net/",
+          "https://www.thevalleyecho.com/all-news/swannanoa-fire-department-maintains-strong-protection-rating",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Swannanoa Fire & Rescue",
+        "station": "Station 2 (Bee Tree)",
+        "address": "510 Bee Tree Rd, Swannanoa, NC 28778",
+        "lat": 35.612308,
+        "lon": -82.420651,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "engine",
+          "tanker (per dept. description)"
+        ],
+        "notes": null,
+        "verification": "address from dept. site via search; county point confirmed",
+        "sources": [
+          "http://www.svfd.net/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Weaverville Fire Department",
+        "station": "Station (only station listed)",
+        "address": "3 Monticello Rd, Weaverville, NC 28787",
+        "lat": 35.712148,
+        "lon": -82.562185,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": "Covers the Town of Weaverville and the North Buncombe Fire District (no separate North Buncombe FD). 24 full-time and 10 part-time staff.",
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://weavervillenc.org/town-council-government/fire-department/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Reynolds Volunteer Fire Department",
+        "station": "Station 9 (only station)",
+        "address": "1 Charles A Lytle Ln, Asheville, NC 28803 (at Charlotte Hwy / US-74A)",
+        "lat": 35.551718,
+        "lon": -82.476736,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "Engine 9",
+          "Engine 9-3",
+          "Engine 9-4",
+          "Engine 1",
+          "Tanker 9",
+          "Rescue 9",
+          "Rescue 9-2",
+          "Rescue 9-3",
+          "Brush 9",
+          "Brush 9-2",
+          "Truck 9",
+          "UTV 9",
+          "UTV 9-2"
+        ],
+        "notes": "Also houses Buncombe County EMS 9. fdmaps' '235 Charlotte Hwy' geocodes to the same spot.",
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://reynoldsfire.org/site/apparatus/buncombe-ems-9/",
+          "https://wiki.radioreference.com/index.php/Buncombe_County_(NC)",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Enka-Candler Fire & Rescue",
+        "station": "Station 10 (HQ)",
+        "address": "85 Pisgah Hwy, Candler, NC 28715",
+        "lat": 35.539568,
+        "lon": -82.684429,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": null,
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://wiki.radioreference.com/index.php/Buncombe_County_(NC)",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Enka-Candler Fire & Rescue",
+        "station": "Station 10-2",
+        "address": "2332 Smokey Park Hwy, Candler, NC 28715",
+        "lat": 35.542486,
+        "lon": -82.742658,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": null,
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://fdmaps.com/buncombe-county/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Enka-Candler Fire & Rescue",
+        "station": "Station 10-3",
+        "address": "125 Jacob Holm(e) Way, Candler, NC 28715",
+        "lat": 35.54334,
+        "lon": -82.640164,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "Ladder 10",
+          "Engine 10-3 (per fan wiki)"
+        ],
+        "notes": "Opened about Dec 2020. Source is a user-edited wiki; the county address point exists.",
+        "verification": "partially verified",
+        "sources": [
+          "https://fire.fandom.com/wiki/Enka_Candler_Fire_and_Rescue_Department",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Riceville Volunteer Fire Department",
+        "station": "Station 11 (only station)",
+        "address": "2251 Riceville Rd, Asheville, NC 28805",
+        "lat": 35.630736,
+        "lon": -82.472084,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "ALS 911 ambulance (dept. website)"
+        ],
+        "notes": null,
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://ricevillefire.org/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Upper Hominy Fire & Rescue",
+        "station": "Station 1 (Main)",
+        "address": "Pisgah Hwy, Candler, NC 28715 (1795 per dept. contact listing; county GIS point is 1750 Pisgah Hwy)",
+        "lat": 35.486925,
+        "lon": -82.740172,
+        "coord_source": "county_address_points (1750 Pisgah Hwy)",
+        "apparatus": null,
+        "notes": "Staffed 24/7 (captain, engineer, firefighter).",
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://uhfire.org/",
+          "https://uhfire.org/contact",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Upper Hominy Fire & Rescue",
+        "station": "Station 2 (Beaverdam)",
+        "address": "91 McFee Rd, Candler, NC 28715",
+        "lat": 35.497223,
+        "lon": -82.690807,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": "Staffed 24/7 (lieutenant, engineer).",
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://uhfire.org/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Reems Creek Fire Department",
+        "station": "Station 14 (Main)",
+        "address": "730 Reems Creek Rd, Weaverville, NC 28787",
+        "lat": 35.694527,
+        "lon": -82.509224,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": null,
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://weavervillenc.org/town-council-government/fire-department/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Reems Creek Fire Department",
+        "station": "Station 2 (Company 17, Beaverdam)",
+        "address": "450 Beaverdam Rd, Asheville, NC 28804",
+        "lat": 35.641861,
+        "lon": -82.531607,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": null,
+        "verification": "aggregator-listed; county address point exists",
+        "sources": [
+          "https://fdmaps.com/buncombe-county/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Barnardsville Fire Department",
+        "station": "Station 15",
+        "address": "100 Dillingham Rd, Barnardsville, NC 28709",
+        "lat": 35.773783,
+        "lon": -82.449678,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": "Also covers the Big Ivy area; no separate Big Ivy station found.",
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://www.barnardsvillefire.com/contact-us/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Jupiter Volunteer Fire Department",
+        "station": "Station 16",
+        "address": "331 Jupiter Rd, Weaverville, NC 28787",
+        "lat": 35.759221,
+        "lon": -82.567674,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": null,
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://wiki.radioreference.com/index.php/Buncombe_County_(NC)",
+          "https://usfiredept.com/jupiter-volunteer-fire-department-11830.html",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Leicester Fire Department",
+        "station": "Station 18-1 (Main)",
+        "address": "1563 Alexander Rd, Leicester, NC 28748",
+        "lat": 35.657721,
+        "lon": -82.695855,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": "RadioReference/Yelp still list an older HQ at 2852 New Leicester Hwy; the dept. site lists 1563 Alexander Rd as the main station. District covers about 100 sq mi.",
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://leicesterfire.com/about-us/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Leicester Fire Department",
+        "station": "Station 18-2 (Sandy Mush)",
+        "address": "15 School Rd, Leicester, NC 28748",
+        "lat": 35.673661,
+        "lon": -82.811586,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": null,
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://leicesterfire.com/about-us/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Leicester Fire Department",
+        "station": "Station 18-3 (Newfound)",
+        "address": "1075 Newfound Rd, Leicester, NC 28748",
+        "lat": 35.606056,
+        "lon": -82.730608,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": null,
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://leicesterfire.com/about-us/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "French Broad Volunteer Fire & Rescue",
+        "station": "Station 19",
+        "address": "572 Fletcher Martin Rd, Alexander, NC 28701",
+        "lat": 35.700477,
+        "lon": -82.639935,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": null,
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://wiki.radioreference.com/index.php/Buncombe_County_(NC)",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Woodfin Fire Department",
+        "station": "Station 20",
+        "address": "New St, Woodfin (listed as 20 New St by most directories; RadioReference and the county GIS point use 17 New St)",
+        "lat": 35.634953,
+        "lon": -82.593063,
+        "coord_source": "county_address_points (17 New St)",
+        "apparatus": null,
+        "notes": "One station.",
+        "verification": "street verified; house number conflicts",
+        "sources": [
+          "https://wiki.radioreference.com/index.php/Buncombe_County_(NC)",
+          "https://www.yelp.com/biz/woodfin-volunteer-fire-dept-asheville",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Broad River Volunteer Fire & Rescue",
+        "station": "Station 1 (HQ)",
+        "address": "44 Broad River VFD Rd, Black Mountain, NC 28711",
+        "lat": 35.510086,
+        "lon": -82.257896,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": null,
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://www.broadriverfire.org/content/stations/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Broad River Volunteer Fire & Rescue",
+        "station": "Station 2 (Shumont)",
+        "address": "525 Shumont Rd, Black Mountain, NC 28711",
+        "lat": 35.472058,
+        "lon": -82.259223,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": null,
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://www.broadriverfire.org/content/stations/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Broad River Volunteer Fire & Rescue",
+        "station": "Station 3 (North End)",
+        "address": "2098 NC Hwy 9, Black Mountain, NC 28711",
+        "lat": 35.546479,
+        "lon": -82.259981,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": null,
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://www.broadriverfire.org/content/stations/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Garren Creek Fire Department",
+        "station": "Station (Flat Creek)",
+        "address": "10 Flat Creek Rd, Fairview, NC 28730",
+        "lat": 35.559186,
+        "lon": -82.316103,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "Engine 23 (per fan wiki)"
+        ],
+        "notes": "Sources disagree on which Garren Creek station is No. 1. The station survived Helene flooding (DVIDS photo).",
+        "verification": "partially verified",
+        "sources": [
+          "https://fire.fandom.com/wiki/Garren_Creek_Fire_Department",
+          "https://fdmaps.com/buncombe-county/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Garren Creek Fire Department",
+        "station": "Station (Garren Creek Rd)",
+        "address": "1366 Garren Creek Rd, Fairview, NC 28730",
+        "lat": 35.530809,
+        "lon": -82.310083,
+        "coord_source": "county_address_points",
+        "apparatus": [
+          "Tanker 23",
+          "Squad 23",
+          "Truck 23 (per fan wiki)"
+        ],
+        "notes": "RadioReference lists this as HQ.",
+        "verification": "partially verified",
+        "sources": [
+          "https://wiki.radioreference.com/index.php/Buncombe_County_(NC)",
+          "https://fire.fandom.com/wiki/Garren_Creek_Fire_Department",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Fairview Fire Department",
+        "station": "Station 1 (Main)",
+        "address": "1586 Charlotte Hwy, Fairview, NC 28730",
+        "lat": 35.515436,
+        "lon": -82.397753,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": "Fairview ran its own ALS transport ambulance(s) as of 2017–2018.",
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://media.buncombenc.gov/common/Commissioners/20170516/Fairview%20Justification%20Letter.pdf",
+          "https://wiki.radioreference.com/index.php/Buncombe_County_(NC)",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Fairview Fire Department",
+        "station": "Station 2 (Old Fort Rd substation)",
+        "address": "799 Old Fort Rd, Fairview, NC 28730",
+        "lat": 35.543235,
+        "lon": -82.382434,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": "Opened Sept 2007.",
+        "verification": "address from official source; address point confirmed in county GIS",
+        "sources": [
+          "https://media.buncombenc.gov/common/Commissioners/20170516/Fairview%20Justification%20Letter.pdf",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Fairview Fire Department",
+        "station": "Station 3 (southern substation)",
+        "address": "133 Upper Brush Creek Rd, Fletcher, NC 28732 (Buncombe County)",
+        "lat": 35.481511,
+        "lon": -82.427129,
+        "coord_source": "county_address_points",
+        "apparatus": null,
+        "notes": "The 2017 county letter confirms a southern substation exists (a renovated steel building bought in 2013) but gives no address. The address came from search results; the county point exists.",
+        "verification": "partially verified",
+        "sources": [
+          "https://media.buncombenc.gov/common/Commissioners/20170516/Fairview%20Justification%20Letter.pdf",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "department": "Asheville Regional Airport (Greater Asheville Regional Airport Authority) - ARFF / Dept. of Public Safety",
+        "station": "Company 24 (ARFF)",
+        "address": "Department of Public Safety building next to the terminal, 61 Terminal Dr, Fletcher, NC 28732 (fdmaps: 780-1 Airport Rd)",
+        "lat": 35.436149,
+        "lon": -82.538505,
+        "coord_source": "fdmaps (aggregator)",
+        "apparatus": [
+          "ARFF Index B; 3 Index-B ARFF vehicles (2015 master plan)"
+        ],
+        "notes": "The airport master plan says airport property is mostly in Buncombe County with a small part in Henderson. Public safety officers do both ARFF and police duty. A new public safety facility was dedicated Aug 2014 (ARFF, airport police, comm center, EOC).",
+        "verification": "partially verified (coordinates from aggregator)",
+        "sources": [
+          "https://flyavl.com/wp-content/uploads/2015/04/4-FINAL-AVL-MP-Chapter-2-Inventory-of-Facilities.pdf",
+          "https://flyavl.com/article/airport-dedicates-new-public-safety-facility",
+          "https://fdmaps.com/buncombe-county/"
+        ]
+      }
+    ],
+    "station_count": 50,
+    "system_notes": [
+      "Buncombe 911 center describes itself as serving 8 law enforcement agencies and 21 fire departments (buncombenc.gov 911 page, seen only in search results; the site blocks automated fetches). The list above has 19 departments plus airport ARFF.",
+      "In April 2026 county commissioners voted to merge 20 fire protection/ambulance-rescue tax districts into one unified fire district. Biltmore Forest, Asheville, Weaverville and Black Mountain keep paying through municipal taxes. Departments appear to remain separate operators. Source: buncombenc.gov via search results plus the Citizen-Times headline (AOL syndication); article body not readable.",
+      "Montreat is served by Black Mountain FD. Biltmore Forest is served by Skyland FD Station 4. The North Buncombe district is served by Weaverville FD.",
+      "Asheville FD: ISO Class 1 (city site)."
+    ],
+    "sources": [
+      "https://www.ashevillenc.gov/department/fire/fire-stations/",
+      "https://www.ashevillenc.gov/department/fire/",
+      "https://wiki.radioreference.com/index.php/Buncombe_County_(NC)",
+      "https://fdmaps.com/buncombe-county/",
+      "https://www.aol.com/news/buncombe-county-adopts-unified-fire-090759671.html",
+      "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+    ]
+  },
+  "ems_stations": {
+    "provider": "Buncombe County EMS (county-run; part of Buncombe County Emergency Services)",
+    "headquarters": {
+      "name": "Buncombe County Emergency Services / EMS",
+      "address": "164 Erwin Hills Rd, Asheville, NC 28806",
+      "lat": 35.619786,
+      "lon": -82.621893,
+      "coord_source": "county_address_points",
+      "sources": [
+        "https://wiki.radioreference.com/index.php/Buncombe_County_(NC)",
+        "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+      ]
+    },
+    "co_location_with_fire": "YES. The 2023 consultant study says 'EMS is principally a guest within existing fire stations'. County officials said the same in March 2026, and WLOS (Sept 2025) adds that ambulances also park at hospitals. EMS East (Swannanoa, about Feb–Mar 2027) will be the county's first standalone EMS station.",
+    "fleet_and_staffing": {
+      "bases_2024": "10 EMS bases, 'from Weaverville to Arden, Candler to Black Mountain' (Mountain Xpress, June 13, 2024). The 2022 study recommended 12 more.",
+      "ambulances": "2022/23 study: 12 24-hour ambulances plus 1 peak-demand unit; 13 needed for daytime peak and 19 total recommended. Mid-2024: 14–15 ambulances at daytime peak, 4–5 spares, 97 paramedics, about 30 on duty at peak.",
+      "sources": [
+        "https://media.buncombenc.gov/common/Commissioners/20230314%20Budget/2_%20EMS%20Study%20Update.pdf",
+        "https://mountainx.com/news/county-juggles-aging-ambulances-and-rising-demand/"
+      ]
+    },
+    "known_stations": [
+      {
+        "name": "EMS 9 (East Asheville)",
+        "host": "Reynolds VFD",
+        "address": "1 Charles A Lytle Ln, Asheville, NC 28803",
+        "lat": 35.551718,
+        "lon": -82.476736,
+        "coord_source": "county_address_points",
+        "verification": "confirmed by Reynolds FD website",
+        "sources": [
+          "https://reynoldsfire.org/site/apparatus/buncombe-ems-9/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "name": "EMS Station 1 (downtown Asheville)",
+        "host": "not stated",
+        "address": null,
+        "lat": null,
+        "lon": null,
+        "verification": "named in 2023 study only",
+        "sources": [
+          "https://media.buncombenc.gov/common/Commissioners/20230314%20Budget/2_%20EMS%20Study%20Update.pdf"
+        ]
+      },
+      {
+        "name": "EMS 3 and EMS 7 (Enka-Candler area)",
+        "host": "not stated (likely Enka-Candler FD stations; unverified)",
+        "address": null,
+        "lat": null,
+        "lon": null,
+        "verification": "named in 2023 study only",
+        "sources": [
+          "https://media.buncombenc.gov/common/Commissioners/20230314%20Budget/2_%20EMS%20Study%20Update.pdf"
+        ]
+      },
+      {
+        "name": "EMS 4 (Black Mountain)",
+        "host": "not stated",
+        "address": null,
+        "lat": null,
+        "lon": null,
+        "verification": "named in 2023 study only",
+        "sources": [
+          "https://media.buncombenc.gov/common/Commissioners/20230314%20Budget/2_%20EMS%20Study%20Update.pdf"
+        ]
+      },
+      {
+        "name": "EMS 5 and EMS 14 (Skyland)",
+        "host": "Skyland area (EMS 14 added 2022 when Skyland FD stopped ALS transport on Jan 1, 2022)",
+        "address": null,
+        "lat": null,
+        "lon": null,
+        "verification": "named in 2023 study; Skyland change confirmed by county board item",
+        "sources": [
+          "https://media.buncombenc.gov/common/Commissioners/20230314%20Budget/2_%20EMS%20Study%20Update.pdf",
+          "https://media.buncombenc.gov/common/Commissioners/20211207/RequestForBoardAction-Skyland%20Ambulance%20Acceptance.pdf"
+        ]
+      },
+      {
+        "name": "EMS 8 (Weaverville)",
+        "host": "not stated",
+        "address": null,
+        "lat": null,
+        "lon": null,
+        "verification": "named in 2023 study only",
+        "sources": [
+          "https://media.buncombenc.gov/common/Commissioners/20230314%20Budget/2_%20EMS%20Study%20Update.pdf"
+        ]
+      }
+    ],
+    "stations_note": "I could not find a published, current list of all 10 EMS base addresses (buncombenc.gov blocks automated access; the full 2022 NCFCC report with its ambulance-distribution map was not found online). Those above are the only ones named in sources.",
+    "planned_stations": [
+      {
+        "name": "EMS East (first standalone county EMS station)",
+        "address": "750 Old US 70 Hwy, Swannanoa, NC 28778 (in front of Owen Pool)",
+        "lat": 35.608381,
+        "lon": -82.371693,
+        "coord_source": "county_address_points",
+        "status": "Under construction since Oct–Nov 2025. Operations expected about Feb–Mar 2027. 12,214 sq ft; bays for 6 vehicles; 1 ambulance + community paramedic unit + EMS supervisor 24/7; about $10M. Will serve Swannanoa, Black Mountain, Bee Tree, East Asheville.",
+        "sources": [
+          "https://www.bpr.org/politics-government/2025-10-08/last-night-at-commission-buncombe-proceeds-with-10m-swannanoa-ems-base",
+          "https://spectrumlocalnews.com/nc/charlotte/news/2025/11/05/buncombe-county-ems-facility",
+          "https://www.thetraveler.org/buncombe-countys-first-standalone-ems-base-targets-faster-911-care/"
+        ]
+      },
+      {
+        "name": "McCormick Place EMS station (conversion of former General Services building)",
+        "address": "40 McCormick Pl, Asheville, NC 28801",
+        "lat": 35.588907,
+        "lon": -82.550131,
+        "coord_source": "county_address_points",
+        "status": "In development (Mar 31, 2026). Delayed by a Helene landslide behind the building; FEMA mitigation pending before permits.",
+        "sources": [
+          "https://wlos.com/news/local/buncombe-county-plans-convert-former-general-services-building-40-mccormick-place-ems-station-asheville-emergency-response-healthcare-infrastructure-fema-federal-emergency-management-agency-first-responders-04-01-2026"
+        ]
+      },
+      {
+        "name": "West regional EMS station",
+        "address": "Brevard Rd, West Asheville (7 acres bought for $1.8M; exact address not published)",
+        "lat": null,
+        "lon": null,
+        "status": "In design.",
+        "sources": [
+          "https://wlos.com/news/local/buncombe-county-build-new-ems-station-west-asheville-emergency-medical-service-locations-ambulance-parking-brevard-road",
+          "https://www.bpr.org/politics-government/2025-10-08/last-night-at-commission-buncombe-proceeds-with-10m-swannanoa-ems-base"
+        ]
+      }
+    ],
+    "other_911_ambulance_providers": [
+      {
+        "name": "Fire-department ALS transport ambulances",
+        "detail": "As of 2018: Barnardsville, Leicester, Reems Creek and Riceville FDs each ran 1 ALS ambulance; Fairview ran 1 with a second cross-staffed; Skyland ran 1–2 (ended Jan 1, 2022); Buncombe County Rescue Squad ran 1 staffed unit 9am–9pm. All 24 county and partner ambulances had AVL; the closest unit is dispatched. Riceville's 2026 website still lists a '911 response ALS ambulance'. Current status of the others not verified.",
+        "sources": [
+          "https://media.buncombenc.gov/common/Commissioners/20180417/EMS%20Strategic%20Analysis.pdf",
+          "https://ricevillefire.org/",
+          "https://media.buncombenc.gov/common/Commissioners/20211207/RequestForBoardAction-Skyland%20Ambulance%20Acceptance.pdf"
+        ]
+      },
+      {
+        "name": "MEDIC (Medical Emergency Ambulance, Inc.) - private",
+        "address": "5 Curtis Dr, Arden, NC 28704",
+        "lat": 35.470538,
+        "lon": -82.572634,
+        "coord_source": "county_address_points",
+        "detail": "County franchise agreement (Apr 1, 2019, 1-year term): 2 ambulances 7am–9pm and 1 ambulance 9pm–7am for emergency and convalescent transport. Units must take 911-center dispatches and may not self-dispatch. Whether this agreement was renewed through 2026 is NOT verified.",
+        "sources": [
+          "https://media.buncombenc.gov/common/Commissioners/20190319/MEDIC%20Draft%20Agmt4.pdf",
+          "https://wiki.radioreference.com/index.php/Buncombe_County_(NC)",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "name": "Buncombe County Rescue Services (rescue squad)",
+        "address": "116 Hansel Ave, Asheville, NC 28806",
+        "lat": 35.592629,
+        "lon": -82.58395,
+        "coord_source": "county_address_points",
+        "detail": "Non-emergency ambulance transport and rescue; ran a daytime 911 ambulance in 2018. Current 911 role not verified.",
+        "sources": [
+          "https://www.buncomberescue.org/emt-and-rescue-operations-ambulance-transportation",
+          "https://media.buncombenc.gov/common/Commissioners/20180417/EMS%20Strategic%20Analysis.pdf",
+          "https://wiki.radioreference.com/index.php/Buncombe_County_(NC)"
+        ]
+      }
+    ],
+    "response_time_goals_and_performance": {
+      "stated_goal": "8 minutes 59 seconds or less, 90% of the time (called the industry standard in the 2023 study; EMS Division Manager Jamison Judd restated it as the goal in Nov 2025).",
+      "tiered_model_recommended_2022_study": "Urban: 8-minute travel time at 90%. Suburban: 10-minute travel at 80%. Rural: 12-minute travel at 70%.",
+      "actual": "2016–2022: from 911 call to EMS arrival was 17 min 17 s at the 90th percentile; EMS response (dispatch to arrival) missed the 8:59 target by 6 min 3 s. 2021–22 90th percentile was over 16 min. Average response about 15.5 min (Spectrum News, Nov 2025). The 2018 analysis found 76% of critical calls answered in under 8 min, using different methods.",
+      "workload": "184,964 EMS records over 6 years (about 31k/yr). 60% of incidents result in transport. Peak calls 11am–5pm, staying high until 10pm+. Fire first responders reach about 77% of non-Alpha medical calls and arrive before EMS on 68.7% of those. Calls up about 20% since 2020; +6,681 calls from FY21 to FY22.",
+      "sources": [
+        "https://media.buncombenc.gov/common/Commissioners/20230314%20Budget/2_%20EMS%20Study%20Update.pdf",
+        "https://media.buncombenc.gov/common/Commissioners/20180417/EMS%20Strategic%20Analysis.pdf",
+        "https://spectrumlocalnews.com/nc/charlotte/news/2025/11/05/buncombe-county-ems-facility",
+        "https://mountainx.com/news/county-juggles-aging-ambulances-and-rising-demand/"
+      ]
+    }
+  },
+  "police": {
+    "agencies": [
+      {
+        "agency": "Asheville Police Department",
+        "name": "Headquarters (Municipal Building)",
+        "address": "100 Court Plaza, Asheville, NC 28801",
+        "lat": 35.594905,
+        "lon": -82.549978,
+        "coord_source": "county_address_points",
+        "notes": "Stays open during the 2026 Municipal Building restoration.",
+        "sources": [
+          "https://www.ashevillenc.gov/department/police/",
+          "https://828newsnow.com/news/228822-asheville-police-fire-headquarters-to-remain-open-during-downtown-restoration/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "agency": "Asheville Police Department",
+        "name": "West Asheville Resource Center (Haywood Rd)",
+        "address": "970 Haywood Rd, Asheville, NC 28806 (shares site with Fire Station 6)",
+        "lat": 35.580912,
+        "lon": -82.602043,
+        "coord_source": "county_address_points",
+        "notes": "A police resource center since 1999; now mainly an officer drop-in point.",
+        "sources": [
+          "https://www.foxcarolina.com/2026/03/25/asheville-police-open-additional-west-asheville-resource-center/",
+          "https://www.bpr.org/politics-government/2025-12-10/asheville-delays-police-station-move-funds-debris-removal",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "agency": "Asheville Police Department",
+        "name": "West Asheville Resource Center (Tanger Outlets)",
+        "address": "800 Brevard Rd, Suite 822, Asheville, NC 28806",
+        "lat": 35.529177,
+        "lon": -82.604341,
+        "coord_source": "county_address_points (800 Brevard Rd main point)",
+        "notes": "Opened Mar 25, 2026 under a 10-year lease. Mon–Fri 8:30am–5pm for reports and records.",
+        "sources": [
+          "https://www.foxcarolina.com/2026/03/25/asheville-police-open-additional-west-asheville-resource-center/",
+          "https://wlos.com/news/local/asheville-police-department-officially-opens-tanger-outlets-resource-center-new-location-west-brevard-haywood-road-apd-staff-incidents",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "agency": "Asheville Police Department",
+        "name": "South Asheville Resource Center",
+        "address": "9 Walden Ridge Dr, Asheville, NC 28803",
+        "lat": 35.497819,
+        "lon": -82.524457,
+        "coord_source": "county_address_points",
+        "notes": "Since 2020 (former SBI office). Roll-call room and work areas for 30 patrol officers.",
+        "sources": [
+          "https://www.ashevillenc.gov/news/city-council-approves-lease-agreement-for-new-south-asheville-police-resource-center-location/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "agency": "Asheville Police Department",
+        "name": "North Asheville substation (Broadway Public Safety Station)",
+        "address": "316 Broadway St, Asheville, NC 28801",
+        "lat": 35.604193,
+        "lon": -82.5581,
+        "coord_source": "county_address_points",
+        "notes": "In the same building as Fire Station 13 and the city EOC (opened late 2023).",
+        "sources": [
+          "https://828newsnow.com/news/228822-asheville-council-to-decide-on-new-west-asheville-police-location/",
+          "https://wlos.com/news/local/12-million-broadway-public-safety-building-opens-promising-improved-services-asheville-fire-station-13-leed-certified-project-asheville-mayor-esther-manheimer"
+        ]
+      },
+      {
+        "agency": "Asheville Police Department",
+        "name": "Oakley Resource Center",
+        "address": "711 Fairview Rd, Asheville, NC 28803",
+        "lat": 35.564558,
+        "lon": -82.515,
+        "notes": "Being displaced (Feb 2026) because the new Fire Station 9 goes on this site. APD moves into the old Station 9 space at the Murphy-Oakley Community Center (749 Fairview Rd), later to be the East Asheville resource center. A temporary East Asheville site (Tunnel Rd area) was under consideration. The 711 Fairview Rd address is confirmed by the city Station 9 project page and county GIS.",
+        "sources": [
+          "https://828newsnow.com/news/228822-asheville-police-weigh-new-resource-center-as-oakley-site-faces-closure/",
+          "https://www.ashevillenc.gov/news/new-fire-station-coming-to-oakley-public-invited-to-learn-about-and-share-input-on-the-project/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ],
+        "coord_source": "county_address_points"
+      },
+      {
+        "agency": "Buncombe County Sheriff's Office",
+        "name": "Headquarters (Buncombe County Courthouse)",
+        "address": "60 Court Plaza, 4th Floor, Asheville, NC 28801",
+        "lat": 35.596156,
+        "lon": -82.548557,
+        "coord_source": "county_address_points",
+        "notes": "No district office addresses are published. Patrol uses 3 districts: District 1 Swannanoa & Barnardsville; District 2 Fairview & Arden; District 3 Candler & Leicester.",
+        "sources": [
+          "https://buncombesheriff.com/patrol/",
+          "https://buncombesheriff.com/enforcement-division/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "agency": "Buncombe County Sheriff's Office",
+        "name": "Detention Facility",
+        "address": "20 Davidson Dr, Asheville, NC 28801",
+        "lat": 35.596107,
+        "lon": -82.547796,
+        "coord_source": "county_address_points",
+        "notes": null,
+        "sources": [
+          "https://buncombecountyjailnc.org/sheriff-office/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "agency": "Black Mountain Police Department",
+        "name": "Public Safety Building (vacated)",
+        "address": "106 Montreat Rd, Black Mountain, NC 28711",
+        "lat": 35.618974,
+        "lon": -82.320957,
+        "coord_source": "county_address_points",
+        "notes": "VACATED from mid-March 2026 over structural problems. Police administration is temporarily at Ridgecrest Conference Center with no walk-in service. Non-emergency line 828-250-6670.",
+        "sources": [
+          "https://www.townofblackmountain.org/2827/Police-Department",
+          "https://www.townofblackmountain.org/m/newsflash/Home/Detail/657",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "agency": "Weaverville Police Department",
+        "name": "HQ",
+        "address": "30 S Main St, Weaverville, NC 28787",
+        "lat": 35.695575,
+        "lon": -82.560099,
+        "coord_source": "county_address_points",
+        "notes": null,
+        "sources": [
+          "https://weavervillenc.org/town-council-government/police-department/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "agency": "Woodfin Police Department",
+        "name": "HQ",
+        "address": "90 Elk Mountain Rd, Woodfin, NC 28804",
+        "lat": 35.631465,
+        "lon": -82.583718,
+        "coord_source": "county_address_points",
+        "notes": null,
+        "sources": [
+          "https://www.discoverpolicing.org/agency/woodfin-police-department/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "agency": "Biltmore Forest Police Department",
+        "name": "HQ (Town Hall)",
+        "address": "355 Vanderbilt Rd, Biltmore Forest, NC 28803",
+        "lat": 35.540506,
+        "lon": -82.536932,
+        "coord_source": "county_address_points",
+        "notes": "Address from directory listings (Waze/LinkedIn), not the town site.",
+        "sources": [
+          "https://www.waze.com/live-map/directions/us/nc/asheville/biltmore-forest-police-department?to=place.ChIJf22i-ujyWYgRhAMKBN7t4QY",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "agency": "Montreat Police Department",
+        "name": "HQ",
+        "address": "1210 Montreat Rd, Montreat, NC 28757",
+        "lat": 35.637594,
+        "lon": -82.312407,
+        "coord_source": "county_address_points",
+        "notes": null,
+        "sources": [
+          "https://townofmontreat.org/police/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "agency": "UNC Asheville Police Department",
+        "name": "Weizenblatt Hall",
+        "address": "One University Heights, Asheville, NC 28804",
+        "lat": null,
+        "lon": null,
+        "notes": "Campus is around 35.617, -82.567 (county address points on University Hts); exact building point not determined. Dispatch 828-232-5000.",
+        "sources": [
+          "https://www.unca.edu/police/"
+        ]
+      },
+      {
+        "agency": "NC State Highway Patrol",
+        "name": "Troop G Headquarters and District IV (Buncombe County)",
+        "address": "600 Tunnel Rd, Asheville, NC 28805",
+        "lat": 35.587058,
+        "lon": -82.510464,
+        "coord_source": "county_address_points",
+        "notes": "Troop G covers 17 western counties. Garage and radio shop are at this site; communications run from Newton.",
+        "sources": [
+          "http://ncshp.gov/contact-us/troop-offices/troop-g-asheville",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "agency": "Asheville Regional Airport Police (Dept. of Public Safety)",
+        "name": "Airport DPS",
+        "address": "61 Terminal Dr, Fletcher, NC 28732",
+        "lat": 35.43468,
+        "lon": -82.537354,
+        "coord_source": "county_address_points (terminal address)",
+        "notes": "Cross-trained ARFF/police officers (airport master plan).",
+        "sources": [
+          "https://flyavl.com/wp-content/uploads/2015/04/4-FINAL-AVL-MP-Chapter-2-Inventory-of-Facilities.pdf",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      }
+    ],
+    "apd_patrol_districts": {
+      "summary": "Three patrol districts, realigned in September 2024 (only Adam kept its boundaries).",
+      "districts": [
+        {
+          "name": "Adam",
+          "area": "West Asheville, out to Smokey Park Hwy and I-40. About 8 officers per 12-hour shift."
+        },
+        {
+          "name": "Baker",
+          "area": "East and South Asheville, reaching Airport Rd on the south side of East Tunnel Rd. About 9 officers per 12-hour shift."
+        },
+        {
+          "name": "Charlie",
+          "area": "Downtown, the areas around downtown, and North Asheville; the downtown business district has 4 dedicated officers."
+        }
+      ],
+      "beats": "Beat-level boundaries were not found in public sources.",
+      "sources": [
+        "https://wlos.com/news/local/asheville-police-restructure-patrol-districts-but-victims-say-crime-remains-reality-chief-mike-lamb-east-west-south",
+        "https://wiki.radioreference.com/index.php/Buncombe_County_(NC)"
+      ]
+    }
+  },
+  "venues": [
+    {
+      "name": "HomeTrust Park (formerly McCormick Field) - Asheville Tourists",
+      "address": "30 Buchanan Pl, Asheville, NC 28801",
+      "lat": 35.587119,
+      "lon": -82.550075,
+      "coord_source": "county_address_points",
+      "capacity": "4,000 seats (renovation architect EwingCole; Wikipedia lists the same, uncited)",
+      "affiliation": "High-A affiliate of the Houston Astros (South Atlantic League)",
+      "typical_event_times": "2026 pattern (July series vs Winston-Salem): Wed–Fri 6:35 pm, Sat 6:05 pm, Sun 1:05 pm. BPR also notes a 6:35 pm standard. Times vary by series; season runs about April–September (2026 home opener Apr 21).",
+      "attendance": "2025: 163,380 total, 2,553 average per game, 8th in the South Atlantic League. 2024: 183,987 total (about 2,831/game). Source is an aggregator (The Baseball Cube). Both seasons were played during the renovation.",
+      "parking": "Very limited on-site parking. About 50 pass-holder spaces at Memorial Stadium lot above the park. Main option is Ironwood Parking Garage (45 Federal Alley, behind Swannanoa Cleaners on Coxe Ave), 0.4 mi away, $2/hr, with a free Gray Line trolley shuttle from 60 min before first pitch until the game ends.",
+      "notes": "Renamed HomeTrust Park Apr 14, 2026 after an 18-month, ~$40M renovation (Aug 2024–Apr 2026). The 2026 opener was a sellout. The lease requires 35,000 non-baseball attendees per year.",
+      "sources": [
+        "https://www.bpr.org/growth-development/2026-04-22/new-season-big-changes-at-the-asheville-tourists-newly-named-hometrust-park",
+        "https://www.ewingcole.com/news/ewingcole-completes-transformative-hometrust-park-centennial-restoration-capital-improvements-project-ahead-of-2026-season/",
+        "https://www.asheville.com/news/2026/07/asheville-tourists-host-winston-salem-dash-through-july-12th/",
+        "https://en.wikipedia.org/wiki/HomeTrust_Park",
+        "https://www.thebaseballcube.com/content/minor_attendance/2025/",
+        "https://www.milb.com/asheville/ballpark/az-guide",
+        "https://rewindasheville.com/news/228822-tips-for-attending-tourists-games-amid-field-renovations/",
+        "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+      ]
+    },
+    {
+      "name": "The Orange Peel",
+      "address": "101 Biltmore Ave, Asheville, NC 28801",
+      "lat": 35.591422,
+      "lon": -82.551129,
+      "coord_source": "county_address_points",
+      "capacity": "1,050 standing, general admission (venue tech page). Wikipedia says a 2009 expansion brought it to 1,100.",
+      "typical_event_times": "Most shows: doors 7 pm, show 8 pm; some doors 6 pm, show 7 pm (October 2026 calendar). Box office opens 4 pm on show days.",
+      "attendance": null,
+      "sources": [
+        "https://theorangepeel.net/info/tech-info/",
+        "https://theorangepeel.net/",
+        "https://en.wikipedia.org/wiki/The_Orange_Peel",
+        "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+      ]
+    },
+    {
+      "name": "Hellbender by the Orange Peel (NEW outdoor amphitheater)",
+      "address": "151 Thompson St, Asheville, NC 28803 (off Swannanoa River Rd, along the Swannanoa River)",
+      "lat": 35.5745,
+      "lon": -82.525,
+      "coord_source": "APPROXIMATE (no county point for 151; placed just east of the 131 Thompson St point)",
+      "capacity": "About 6,000 (lawn plus premium/standard seating)",
+      "typical_event_times": "Limited 2026 season (first concert Aug 1, 2026) running to October; full season from spring 2027. Shows must end by 10 pm. Example: Oct 14, 2026 show had doors 4:30 pm, show 6 pm.",
+      "attendance": null,
+      "parking": "Shuttles from Asheville Mall (lower level of the former JCPenney), about 10 minutes each way. Private lots nearby $15–30. In July 2026, pedestrians walking Swannanoa River Rd after dark needed APD and traffic-control help.",
+      "notes": "On the former Cursus Keme brewery site, which closed after Helene. This is a new 6,000-person event generator near Biltmore Village and the Swannanoa River Rd / I-240 / Tunnel Rd corridor; worth modeling.",
+      "sources": [
+        "https://wlos.com/news/local/orange-peel-open-new-outdoor-venue-hellbender-asheville-july-2026-concerts-live-music-performances-organizers-stage-seating-programming-riverside-wnc-helene",
+        "https://avlwatchdog.org/opinion-hellbender-has-some-kinks-to-work-out-but-its-going-to-be-a-cool-outdoor-music-venue/",
+        "https://theorangepeel.net/",
+        "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+      ]
+    },
+    {
+      "name": "Harrah's Cherokee Center Asheville (ExploreAsheville.com Arena + Thomas Wolfe Auditorium)",
+      "address": "87 Haywood St, Asheville, NC 28801",
+      "lat": 35.597478,
+      "lon": -82.555293,
+      "coord_source": "county_address_points",
+      "capacity": "ExploreAsheville.com Arena: 'up to 7,200 depending on event set up' (floor max 2,645, balcony max 3,623) per the venue site; Wikipedia gives 7,674. Thomas Wolfe Auditorium: 2,431 seats (home of the Asheville Symphony). Banquet Hall: 420. Exhibition Hall: 25,148 sq ft.",
+      "typical_event_times": "Varies by event; schedule not compiled.",
+      "attendance": null,
+      "sources": [
+        "https://www.harrahscherokeecenterasheville.com/venues/",
+        "https://www.harrahscherokeecenterasheville.com/venues/exploreasheville-arena/",
+        "https://en.wikipedia.org/wiki/Harrah%27s_Cherokee_Center",
+        "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+      ]
+    },
+    {
+      "name": "Biltmore Estate",
+      "address": "Entrance: 1 Lodge St, Asheville, NC 28803 (Lodge Gate, Biltmore Village)",
+      "lat": 35.566416,
+      "lon": -82.545328,
+      "coord_source": "county_address_points (1 Lodge St)",
+      "capacity": "8,000-acre estate. Main lots near the house: A and B (8–10 min walk), C (RV), E (park-and-ride with shuttle). No published vehicle capacity found.",
+      "typical_event_times": "Daytime admission plus Candlelight Christmas Evenings, Nov 3, 2026–Jan 9, 2027 (Biltmore tickets page; some secondary sources say through Jan 10). Evening entry times not listed on the tickets page.",
+      "attendance": "About 1.4 million visitors (FY2023 economic impact study via Asheville Watchdog). About 85% from outside Buncombe; $250.3M spent off-estate. Candlelight visitor counts: NOT FOUND.",
+      "entry_exit_routing": "Entry (official): I-40 Exit 50/50B to US-25 (Hendersonville Rd) north, then the far-left lane onto All Souls Crescent to the Lodge Gate at 1 Lodge St. It is 3 miles from the gate/reception to Biltmore House. Exit: NOT found in Biltmore's official materials. OpenStreetMap shows the one-way inbound Approach Road and the outbound 'Biltmore Estate Drive' (partly one-way) both meeting public streets at Biltmore Village (Lodge St/US-25A and McDowell St/All Souls Crescent/US-25). I found no verified public exit gate straight onto Hendersonville Rd south of the village, so do not assume one without confirmation. Biltmore's directions say visitors pass the Gardens, Conservatory, Farm, Antler Hill Village and Winery on the way to the exit.",
+      "sources": [
+        "https://www.biltmore.com/help-center/directions-and-parking/",
+        "https://www.biltmore.com/faq/local-driving-directions/",
+        "https://www.biltmore.com/visit/tickets-pricing/",
+        "https://avlwatchdog.org/opinion-is-the-biltmore-estate-a-tourist-trap-well-maybe-a-little-bit-but-its-also-an-economic-engine/",
+        "https://wlos.com/news/ask-13/ask-13-a-simple-solution-to-biltmore-traffic",
+        "https://www.openstreetmap.org (ODbL), queried via https://overpass-api.de",
+        "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+      ]
+    },
+    {
+      "name": "The North Carolina Arboretum - Winter Lights",
+      "address": "20 Frederick Law Olmsted Way, Asheville, NC 28806 (official). Some listings say 100.",
+      "lat": 35.501732,
+      "lon": -82.598905,
+      "coord_source": "county_address_points",
+      "capacity": "434-acre grounds. Winter Lights is about a 1-mile walk; tickets are sold per vehicle with timed entry.",
+      "typical_event_times": "Winter Lights Nov 13, 2026–Jan 3, 2027, 6–10 pm nightly; historical entry slots at 6, 7 and 8 pm. Normal hours: Apr–Oct 8am–9pm, Nov–Mar 8am–7pm; $25/vehicle parking.",
+      "attendance": "'More than 100,000 guests each year' appears only on aggregator/third-party sites; not confirmed by the Arboretum.",
+      "access": "Off NC-191 (Brevard Rd) at Blue Ridge Parkway MP 393.6. I-26's new Exit 35 to Frederick Law Olmsted Way is due by end of 2026.",
+      "sources": [
+        "https://ncarboretum.org/",
+        "https://www.exploreasheville.com/article/north-carolina-arboretums-winter-lights",
+        "https://wlos.com/news/local/north-carolina-arboretums-winter-lights-tickets-now-on-sale-for-2026-season-christmas-holiday-forest-floor-beneath-riverbed-dragonflies-frog-between-water-woods-eventbrite-website",
+        "https://www.uncorkedasheville.com/arboretum-winter-lights-asheville/",
+        "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+      ]
+    },
+    {
+      "name": "The Omni Grove Park Inn",
+      "address": "290 Macon Ave, Asheville, NC 28804",
+      "lat": 35.620638,
+      "lon": -82.542471,
+      "coord_source": "county_address_points",
+      "capacity": "513 guest rooms (Wikipedia)",
+      "typical_event_times": "National Gingerbread House Competition display runs November into early January; visitor counts not found.",
+      "attendance": null,
+      "sources": [
+        "https://www.historichotels.org/us/hotels-resorts/omni-grove-park-inn",
+        "https://en.wikipedia.org/wiki/The_Omni_Grove_Park_Inn",
+        "https://www.omnihotels.com/hotels/asheville-grove-park/things-to-do/national-gingerbread-competition",
+        "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+      ]
+    },
+    {
+      "name": "Asheville Mall",
+      "address": "3 S Tunnel Rd, Asheville, NC 28805",
+      "lat": 35.581788,
+      "lon": -82.526365,
+      "coord_source": "county_address_points",
+      "capacity": "Largest mall in WNC. Size quoted from about 974,000 to 1.26M sq ft; about 99–130 stores. Anchors: Belk and two Dillard's. JCPenney closed May 2025; former Sears vacant (Wikipedia).",
+      "typical_event_times": "Retail hours not compiled.",
+      "attendance": null,
+      "notes": "The former JCPenney lower level is the Hellbender shuttle lot (2026).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Asheville_Mall",
+        "https://avlwatchdog.org/opinion-hellbender-has-some-kinks-to-work-out-but-its-going-to-be-a-cool-outdoor-music-venue/",
+        "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+      ]
+    },
+    {
+      "name": "Tanger Outlets Asheville (formerly Asheville Outlets)",
+      "address": "800 Brevard Rd, Asheville, NC 28806 (at I-26 Exit 33)",
+      "lat": 35.529177,
+      "lon": -82.604341,
+      "coord_source": "county_address_points",
+      "capacity": "About 382,000 sq ft open-air center with about 70 stores",
+      "typical_event_times": null,
+      "attendance": null,
+      "notes": "Tanger bought it for $70M (effective Nov 13, 2023) and renamed it in Jan 2024. APD resource center in Suite 822 since Mar 2026.",
+      "sources": [
+        "https://investors.tanger.inc/press-releases/detail/576/tanger-announces-acquisition-of-asheville-outlets-in-asheville-north-carolina",
+        "https://www.foxcarolina.com/2023/11/15/tanger-buys-asheville-outlets-70-million-deal/",
+        "https://wlos.com/news/local/asheville-outlets-new-name-tanger-bought-shopping-center-acquisition-benefits",
+        "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+      ]
+    },
+    {
+      "name": "Blue Ridge Parkway - Buncombe County access points",
+      "visitation": "2025: more than 16.5 million recreation visits, the most-visited NPS unit again (WLOS). 2023: 16.7M (NPS release). 2024: the Parkway lost the top spot after Helene closures; one search summary gave 16.7M for 2024 but I could not verify it.",
+      "status_2026_10_06": "All Buncombe sections listed OPEN on the NPS road-status page dated Oct 6, 2026. US-25 interchange 'open with traffic control'; NC-191 has short-duration single-lane work; FS Road 63 (Stoney Fork) spur at MP 367.6 closed. Nearest remaining Helene closure is MP 344.2–355.3, outside Buncombe. WLOS (Oct 5, 2026): 11 Parkway miles still closed statewide.",
+      "access_points": [
+        {
+          "name": "Craggy Gardens (Visitor Center)",
+          "milepost": "about 364.5 (NPS lists Craggy Gardens area at about MP 364)",
+          "lat": 35.700286,
+          "lon": -82.379644,
+          "coord_source": "county address point '3645 Blue Ridge Pkwy' (milepost-based address); approximate"
+        },
+        {
+          "name": "NC-694 (Town Mountain Rd)",
+          "milepost": null,
+          "lat": 35.648,
+          "lon": -82.491,
+          "coord_source": "OSM-derived crossing point; approximate"
+        },
+        {
+          "name": "Folk Art Center",
+          "milepost": "382",
+          "lat": 35.592805,
+          "lon": -82.481977,
+          "coord_source": "county address point '3820 Blue Ridge Pkwy' (milepost-based address); approximate"
+        },
+        {
+          "name": "US-70 (Tunnel Rd) interchange",
+          "milepost": "382.8 (NPS segment 382.8–384.1 runs US-70 to HQ/Visitor Center)",
+          "lat": 35.5864,
+          "lon": -82.4791,
+          "coord_source": "OSM-derived crossing point; approximate"
+        },
+        {
+          "name": "Parkway Visitor Center / HQ",
+          "milepost": "about 384",
+          "lat": null,
+          "lon": null,
+          "coord_source": null
+        },
+        {
+          "name": "US-74A (Charlotte Hwy) interchange, near I-40 Exit 53A",
+          "milepost": "384.7",
+          "lat": 35.5627,
+          "lon": -82.4941,
+          "coord_source": "OSM-derived crossing point; approximate"
+        },
+        {
+          "name": "US-25 (Hendersonville Rd) interchange",
+          "milepost": "388.8",
+          "lat": 35.52,
+          "lon": -82.5288,
+          "coord_source": "OSM-derived crossing point; approximate",
+          "note": "The Parkway bridges US-25 (Hendersonville Rd) here."
+        },
+        {
+          "name": "NC-191 (Brevard Rd) interchange, at the NC Arboretum",
+          "milepost": "393.6",
+          "lat": 35.4998,
+          "lon": -82.5929,
+          "coord_source": "OSM-derived crossing point; approximate"
+        }
+      ],
+      "sources": [
+        "https://www.nps.gov/blri/planyourvisit/roadclosures.htm",
+        "https://wlos.com/news/local/blue-ridge-parkway-second-deadliest-national-park-service-most-visited-great-smoky-mountains-crash-medical-emergency-falls-deer-tree-boone-fork-trail-blowing-rock-transylvania-county-sheriffs-office-fatalities",
+        "https://www.nps.gov/blri/learn/news/325-5-million-visits-to-national-parks-in-2023-16-7-million-visits-to-the-blue-ridge-parkway.htm",
+        "https://wlos.com/newsletter-daily/blue-ridge-parkway-now-11-miles-shy-of-being-fully-reopened-following-helene-deputy-secretary-interior-kate-macgregor-little-switzerland-landslides-hurricane-tropical-storm-damage",
+        "https://www.openstreetmap.org (ODbL), queried via https://overpass-api.de",
+        "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+      ]
+    }
+  ],
+  "tourism": {
+    "annual_visitors": [
+      {
+        "year": 2023,
+        "visitors": 13900000,
+        "overnight": 5000000,
+        "day_trip_50mi_plus": 9000000,
+        "note": "Record. Overnight visitors were 37% of volume but 70% of spending.",
+        "sources": [
+          "https://avlwatchdog.org/a-new-buncombe-record-13-9-million-tourists-in-2023/",
+          "https://www.exploreasheville.com/community/value-visitor-economy",
+          "https://www.bpr.org/bpr-news/2024-11-21/tourism-too-soon-not-soon-enough-buncombe-projects-70-loss-from-disaster"
+        ]
+      },
+      {
+        "year": 2024,
+        "visitors": null,
+        "note": "Visitor-volume figure for 2024 NOT FOUND (spending only)."
+      },
+      {
+        "year": 2025,
+        "visitors": null,
+        "note": "Visitor-volume figure for 2025 NOT FOUND."
+      }
+    ],
+    "visitor_spending": [
+      {
+        "year": 2022,
+        "usd": 2880000000,
+        "sources": [
+          "https://wlos.com/news/local/tourism-spending-in-buncombe-county-hits-record-high-nearly-3-billion-explore-asheville-taxes-"
+        ]
+      },
+      {
+        "year": 2023,
+        "usd": 2970000000,
+        "breakdown": {
+          "lodging": 901000000,
+          "food_beverage": 787000000,
+          "retail": 541000000,
+          "transportation": 372000000,
+          "recreation_entertainment": 366000000
+        },
+        "jobs": 29148,
+        "sources": [
+          "https://avlwatchdog.org/a-new-buncombe-record-13-9-million-tourists-in-2023/",
+          "https://www.exploreasheville.com/community/value-visitor-economy"
+        ]
+      },
+      {
+        "year": 2024,
+        "usd": 2650000000,
+        "breakdown": {
+          "lodging": 784000000,
+          "food_beverage": 718000000,
+          "retail": 496000000,
+          "recreation": 329000000,
+          "transportation": 323000000
+        },
+        "jobs": 18377,
+        "payroll_usd": 609000000,
+        "note": "Helene hit Sept 27, 2024.",
+        "sources": [
+          "https://marketing.exploreasheville.com/acton/fs/blocks/showLandingPage/a/43256/p/p-0128/t/page/fm/0",
+          "https://www.biltmorebeacon.com/news/visitors-to-buncombe-county-shopped-local-to-the-tune-of-2-65-billion-in-2024/article_4461b733-9ff9-4906-a368-199c276a557a.html"
+        ]
+      },
+      {
+        "year": 2025,
+        "usd": 2600000000,
+        "note": "About $2.6B: down 2.1% from 2024 and about 13% below 2023. Buncombe stayed NC's #3 county for visitor spending. Visit NC data reported Aug–Sep 2026.",
+        "sources": [
+          "https://828newsnow.com/news/228822-two-years-after-helene-wnc-economic-recovery-remains-uneven/",
+          "https://wlos.com/news/local/despite-spending-drop-after-helene-wnc-has-states-3rd-largest-visitor-economy-visit-nc-tourism-western-north-carolina-asheville-buncombe-county-economy-data-visit-community"
+        ]
+      }
+    ],
+    "lodging_supply": {
+      "hotel_rooms_avg_per_night_2025": "just under 10,000",
+      "vacation_rental_units_2025": "about 8,000",
+      "hotel_share_of_supply_2025": "56% (highest since 2021)",
+      "note": "From Explore Asheville CEO Vic Isley's Feb 2026 board presentation, as reported by Mountain Xpress. I read it only in search excerpts (the article returned 403). An older count was 'nearly 8,000 rooms' (Mountain Xpress, undated).",
+      "sources": [
+        "https://mountainx.com/news/tourism/hotels-bounce-back-in-buncombe-county-as-vacation-rentals-dip",
+        "https://mountainx.com/news/nearly-8000-rooms-and-counting-buncombe-residents-question-how-much-lodging-is-too-much/"
+      ]
+    },
+    "peak_months": {
+      "summary": "October (leaf season) is the peak month. STR data has shown October as the top hotel-revenue month for several years (about $50M in one older report, with a record 86.2% occupancy in that older period; exact year not confirmed). Peak-day visitor counts: NOT FOUND in any source.",
+      "derived_only": "Simple average: 13.9M visitors / 365 = about 38,000 visitor arrivals per day in 2023. This is my arithmetic, not a sourced peak-day figure, and it is not a count of people present.",
+      "sources": [
+        "https://ashvegas.com/demand-for-hotels-in-asheville-area-skyrockets-october-shatters-records-for-occupancy/?_page=1175",
+        "https://wlos.com/news/local/asheville-tourism-recovery-hotels-restaurants-report-varied-booking-trends-october-leaf-viewing-season-jargon-pisgah-inn-wright-blue-ridge-parkway-repairs"
+      ]
+    },
+    "leaf_peak_timing": {
+      "summary": "Asheville (about 2,100 ft) usually peaks in the third to fourth week of October, running into the first days of November. Higher elevations (Craggy, Mt. Mitchell) peak early-to-mid October, and color moves downhill about 1,000 ft every 7–10 days. Sources are travel/lodging guides, not an agency forecast.",
+      "sources": [
+        "https://www.romanticasheville.com/fall.htm",
+        "https://therestorationhotel.com/peak-fall-color-asheville/",
+        "https://noc.com/news/western-north-carolina-fall-foliage-forecast-map/"
+      ]
+    },
+    "helene_effects": {
+      "summary": "Q4 2024 was projected at about a 70% revenue loss (about $585M) for tourism and hospitality. 10,000–12,000 service workers applied for disaster unemployment. Hotels had their best-ever January occupancy in 2025 because of recovery workers. Summer 2025 was uneven: some B&Bs were at about 15% occupancy versus 90% before the storm, while Pisgah Inn was 85% booked for October. Spending kept falling in 2025 (−2.1%) even as some mountain regions grew. Blue Ridge Parkway reopenings continued into 2026, and I-40 through the Pigeon River Gorge is still down to one lane each way.",
+      "sources": [
+        "https://www.bpr.org/bpr-news/2024-11-21/tourism-too-soon-not-soon-enough-buncombe-projects-70-loss-from-disaster",
+        "https://www.bpr.org/bpr-news/2025-02-27/surge-of-recovery-workers-gives-buncombe-hotels-best-ever-january-for-occupancy",
+        "https://wlos.com/news/local/asheville-tourism-recovery-hotels-restaurants-report-varied-booking-trends-october-leaf-viewing-season-jargon-pisgah-inn-wright-blue-ridge-parkway-repairs",
+        "https://828newsnow.com/news/228822-two-years-after-helene-wnc-economic-recovery-remains-uneven/"
+      ]
+    }
+  },
+  "traffic": {
+    "aadt_data_service": {
+      "recommended_endpoint_stations": "https://services.arcgis.com/NuWFvHYDMVmmxMeM/arcgis/rest/services/NCDOT_2025_AADTandTrafficSegments_gdb/FeatureServer/1",
+      "recommended_endpoint_segments": "https://services.arcgis.com/NuWFvHYDMVmmxMeM/arcgis/rest/services/NCDOT_2025_AADTandTrafficSegments_gdb/FeatureServer/0",
+      "older_endpoints": [
+        "https://services.arcgis.com/NuWFvHYDMVmmxMeM/arcgis/rest/services/NCDOT_AADT_Stations/FeatureServer/0 (2002–2022)",
+        "https://services.arcgis.com/NuWFvHYDMVmmxMeM/arcgis/rest/services/NCDOT__2024_AADT_Stations_published_September_2025/FeatureServer/0"
+      ],
+      "notes": "Stations layer: 878 Buncombe points with LocationID, Located_On, Approach, Crossroad, Latitude, Longitude and AADT_2002..AADT_2025. Query with where=County='Buncombe'. Most surface-street stations are counted in even years (latest 2024); most mainline interstate stations have no count after 2023. The segments layer has 2025 AADT for every segment plus K_FACTOR, D_FACTOR and truck percentages. Data last edited about Sept 2026. Map page: https://connect.ncdot.gov/resources/State-Mapping/pages/traffic-volume-maps.aspx",
+      "sources": [
+        "https://services.arcgis.com/NuWFvHYDMVmmxMeM/arcgis/rest/services/NCDOT_2025_AADTandTrafficSegments_gdb/FeatureServer/1",
+        "https://services.arcgis.com/NuWFvHYDMVmmxMeM/arcgis/rest/services/NCDOT_2025_AADTandTrafficSegments_gdb/FeatureServer/0",
+        "https://connect.ncdot.gov/resources/State-Mapping/pages/traffic-volume-maps.aspx"
+      ]
+    },
+    "aadt_values": [
+      {
+        "location_requested": "I-26 near Henderson County line",
+        "ncdot_station_id": "0110000318",
+        "station_description": "I-26 between NC 146 (Long Shoals Rd, Exit 37) and NC 280 (Airport Rd, Exit 40)",
+        "lat": 35.46187,
+        "lon": -82.54565,
+        "aadt_by_year": {
+          "2019": 80000,
+          "2023": 78500
+        },
+        "ncdot_2025_segment": {
+          "aadt_2025": 80000,
+          "k_factor": 0.081,
+          "d_factor": 0.527,
+          "single_unit_truck_pct": 3.3,
+          "combo_truck_pct": 7.1
+        },
+        "note": "Just over the line in Henderson County (station 0450000233, Exit 40–44): 2019 64,000; 2023 60,500; 2025 67,500."
+      },
+      {
+        "location_requested": "I-26 near Madison County line",
+        "ncdot_station_id": "0110000266",
+        "station_description": "I-26 between NC 213 (Carl Eller Rd, Exit 11) and SR 2207 (Exit 13)",
+        "lat": 35.78924,
+        "lon": -82.53963,
+        "aadt_by_year": {
+          "2019": 27500,
+          "2023": 26500
+        },
+        "ncdot_2025_segment": {
+          "aadt_2025": 27000,
+          "single_unit_truck_pct": 4.0,
+          "combo_truck_pct": 4.8
+        },
+        "note": "Madison County station 0570000069 (Exit 9–11): 2023 26,000."
+      },
+      {
+        "location_requested": "I-40 near Haywood County line",
+        "ncdot_station_id": "0110000096",
+        "station_description": "I-40 between SR 1004 (Newfound Rd, Exit 33) and SR 1200 (Wiggins Rd, Exit 37)",
+        "lat": 35.54081,
+        "lon": -82.76192,
+        "aadt_by_year": {
+          "2019": 55500,
+          "2023": 57500
+        },
+        "ncdot_2025_segment": {
+          "aadt_2025": 52500,
+          "k_factor": 0.078,
+          "d_factor": 0.528,
+          "single_unit_truck_pct": 4.2,
+          "combo_truck_pct": 10.5
+        },
+        "note": "Haywood station 0440000270 (Exit 31–33): 2023 56,000."
+      },
+      {
+        "location_requested": "I-40 near Black Mountain / McDowell County line",
+        "ncdot_station_id": "0110000334",
+        "station_description": "I-40 between SR 2531 (Dunsmore Ave, Exit 66) and US 70 (W Main St, Old Fort, Exit 72)",
+        "lat": 35.61929,
+        "lon": -82.28016,
+        "aadt_by_year": {
+          "2019": 38000,
+          "2023": 36000
+        },
+        "ncdot_2025_segment": {
+          "aadt_2025": 38000,
+          "k_factor": 0.099,
+          "d_factor": 0.518,
+          "single_unit_truck_pct": 6.2,
+          "combo_truck_pct": 7.8
+        },
+        "note": "Also I-40 NC 9 (Exit 64) to US 70 (Exit 65), station 0110000269: 2023 34,500. McDowell station 0590000044 (Exit 72–73): 2023 29,500."
+      },
+      {
+        "location_requested": "I-240 downtown (I-26/I-240 overlap, Bowen Bridge section)",
+        "ncdot_station_id": "0110000606",
+        "station_description": "I-240 between US 19 (Exit 4A) and US 19 (Exit 3A)",
+        "lat": 35.59002,
+        "lon": -82.57513,
+        "aadt_by_year": {
+          "2019": 114000,
+          "2022": 88500,
+          "2023": 91500,
+          "2024": 93000,
+          "2025": 91000
+        }
+      },
+      {
+        "location_requested": "I-240 downtown (Patton Ave to Haywood St)",
+        "ncdot_station_id": "0110000600",
+        "station_description": "I-240 between Patton Ave (Exit 4B) and Haywood St (Exit 4C)",
+        "lat": 35.59528,
+        "lon": -82.56223,
+        "aadt_by_year": {
+          "2019": 86500,
+          "2023": 78000
+        },
+        "ncdot_2025_segment": {
+          "aadt_2025": 79500,
+          "k_factor": 0.087,
+          "d_factor": 0.517
+        }
+      },
+      {
+        "location_requested": "I-240 downtown (Charlotte St to US 25/Merrimon)",
+        "ncdot_station_id": "0110000591",
+        "station_description": "I-240 between Charlotte St (Exit 5B) and US 25 (Exit 5A)",
+        "lat": 35.59991,
+        "lon": -82.55073,
+        "aadt_by_year": {
+          "2019": 84500,
+          "2023": 76000
+        },
+        "ncdot_2025_segment": {
+          "aadt_2025": 77500,
+          "k_factor": 0.087,
+          "d_factor": 0.517
+        },
+        "note": "East of here: US 70 (Exit 6) to Charlotte St, 2023 74,500 (0110000565); US 70 (Exit 7) to Chunns Cove (Exit 6), 2023 68,500 (0110000555)."
+      },
+      {
+        "location_requested": "US 25 Hendersonville Rd north of the Blue Ridge Parkway",
+        "label": "US 25 Hendersonville Rd north of the Blue Ridge Parkway",
+        "ncdot_station_id": "0110000417",
+        "station_description": "US 25 north of Blue Ridge Pkwy",
+        "lat": 35.52096,
+        "lon": -82.52903,
+        "aadt_by_year": {
+          "2022": 39500,
+          "2024": 34500
+        },
+        "ncdot_2025_segment": {
+          "aadt_2025": 34000,
+          "k_factor": 0.095,
+          "d_factor": 0.524,
+          "single_unit_truck_pct": 1.6,
+          "combo_truck_pct": 0.4,
+          "milepost": "5.471-6.474"
+        },
+        "note": "Next station north: 0110000191, US 25 south of Rock Hill Rd (35.53198, -82.52824): 2022 32,500; 2024 34,000. Further south, 0110000175 north of Deerlake Dr: 2024 41,500. Derived design hour: 34,000 × 0.095 = about 3,230 veh/h two-way, about 1,690 in the peak direction."
+      },
+      {
+        "location_requested": "Tunnel Rd near Asheville Mall",
+        "ncdot_station_id": "0110000377",
+        "station_description": "US 70 (Tunnel Rd) west of Crockett Ave",
+        "lat": 35.58669,
+        "lon": -82.51493,
+        "aadt_by_year": {
+          "2022": 24500,
+          "2024": 26000
+        },
+        "ncdot_2025_segment": {
+          "aadt_2025": 26000,
+          "k_factor": 0.097,
+          "d_factor": 0.542
+        },
+        "note": "Others: US 70 north of White Pine Dr (0110000239) 2024 17,500; US 74A/S Tunnel Rd south of US 70 (0110000136) 2024 21,000; US 74A south of US 70 (0110000414) 2024 16,500; US 70 east of S Tunnel Rd (0110000237) 2024 14,500."
+      },
+      {
+        "location_requested": "Patton Ave (West Asheville, US 19-23)",
+        "ncdot_station_id": "0110000078",
+        "station_description": "US 19 west of SR 1332 (N Louisiana Ave)",
+        "lat": 35.58674,
+        "lon": -82.59518,
+        "aadt_by_year": {
+          "2022": 48500,
+          "2024": 52000
+        },
+        "ncdot_2025_segment": {
+          "aadt_2025": 52000,
+          "k_factor": 0.088,
+          "d_factor": 0.526
+        },
+        "note": "US 19 east of Florida Ave (0110000240): 2023 52,000, 2025 47,000. US 19 between I-240 and Hill St (0110000092, the Bowen Bridge approach): 2023 69,000. Downtown Patton Ave east of Clingman Ave (0110000700): 2024 12,500."
+      },
+      {
+        "location_requested": "Merrimon Ave (US 25 north)",
+        "ncdot_station_id": "0110000112",
+        "station_description": "US 25 north of Marcellus St",
+        "lat": 35.60123,
+        "lon": -82.55354,
+        "aadt_by_year": {
+          "2022": 21000,
+          "2024": 24500
+        },
+        "ncdot_2025_segment": {
+          "aadt_2025": 24500,
+          "k_factor": 0.094,
+          "d_factor": 0.586
+        },
+        "note": "US 25 south of Annandale Ave (0110000391) 2024 19,500; north of W.T. Weaver Blvd (0110000411) 2024 20,000; north of Beaverdam Rd (0110000244) 2024 11,500."
+      },
+      {
+        "location_requested": "Brevard Rd (NC 191) at Tanger Outlets / I-26 Exit 33",
+        "ncdot_station_id": "0110000179",
+        "station_description": "NC 191 south of Pacoda St",
+        "lat": 35.52903,
+        "lon": -82.60608,
+        "aadt_by_year": {
+          "2022": 22000,
+          "2024": 24500
+        },
+        "ncdot_2025_segment": {
+          "aadt_2025": 24500,
+          "k_factor": 0.099,
+          "d_factor": 0.576
+        },
+        "note": "NC 191 east of I-26 (0110000180) 2024 20,500; south of NC 112 Sardis Rd (0110000098) 2024 25,000; north of Pond Rd (0110000416) 2024 20,000."
+      },
+      {
+        "location_requested": "Smokey Park Hwy (US 19-23, Candler/Enka)",
+        "ncdot_station_id": "0110000115",
+        "station_description": "US 19 south of SR 1224 (Sand Hill School Rd)",
+        "lat": 35.55558,
+        "lon": -82.64124,
+        "aadt_by_year": {
+          "2022": 31000,
+          "2024": 29000
+        },
+        "ncdot_2025_segment": {
+          "aadt_2025": 29000,
+          "k_factor": 0.087,
+          "d_factor": 0.574
+        },
+        "note": "East of Old Haywood Rd (0110000210) 2024 24,500; west of NC 112 Sand Hill Rd (0110000357) 2024 26,500; east of Dogwood Rd (0110000063) 2024 27,500; west of Old US 19-23 (0110000095) 2024 14,000."
+      },
+      {
+        "location_requested": "Sweeten Creek Rd (US 25A)",
+        "ncdot_station_id": "0110000207",
+        "station_description": "US 25 ALT north of Medical Park Dr",
+        "lat": 35.55359,
+        "lon": -82.51985,
+        "aadt_by_year": {
+          "2022": 28500,
+          "2024": 29500
+        },
+        "ncdot_2025_segment": {
+          "aadt_2025": 29500,
+          "k_factor": 0.088,
+          "d_factor": 0.577
+        },
+        "note": "North of Rock Hill Rd (0110000097) 2024 29,000; south of W Chapel Rd (0110000138) 2024 25,500; north of Blue Ridge Pkwy (0110000177) 2024 18,000."
+      },
+      {
+        "location_requested": "Long Shoals Rd (NC 146)",
+        "ncdot_station_id": "0110000150",
+        "station_description": "NC 146 east of I-26 (Exit 37)",
+        "lat": 35.48205,
+        "lon": -82.55397,
+        "aadt_by_year": {
+          "2022": 36500,
+          "2024": 33500
+        },
+        "ncdot_2025_segment": {
+          "aadt_2025_segment_mp_1.627_2.74": 27500,
+          "k_factor": 0.097,
+          "d_factor": 0.556
+        },
+        "note": "West of US 25 (0110000152) 2024 25,500; east of Ledbetter Rd (0110000149) 2024 25,500. The segment value (27,500) and station value (33,500) disagree; they may cover different sub-segments."
+      },
+      {
+        "location_requested": "Extra: I-26 between I-40 (Exit 31) and NC 191 (Exit 33)",
+        "ncdot_station_id": "0110000545",
+        "station_description": "I-26 between I-40 and NC 191",
+        "lat": 35.54734,
+        "lon": -82.60621,
+        "aadt_by_year": {
+          "2019": 89000,
+          "2023": 78500,
+          "2024": 67500,
+          "2025": 76000
+        },
+        "note": "Construction zone during the I-26 widening. I-26 NC 191 to Long Shoals (0110000544): 2023 84,000. I-40 NC 191 (Exit 47) to US 25 (Exit 50) (0110000209): 2023 55,000, 2025 47,500."
+      }
+    ],
+    "projects_2026": [
+      {
+        "name": "I-26 Connector (Asheville)",
+        "status": "Groundbreaking Apr 23, 2026. About $1.8B, design-build (Archer-Wright JV). Completion late 2031 (NCDOT page: Oct 2031). Year-one traffic impacts expected to be minimal apart from ramps already closed near the Jeff Bowen Bridge. Section C (I-40 interchanges with Smokey Park Hwy, I-26/I-240 and Brevard Rd) was being reprioritized for funding, schedule not final. Will separate interstate from local traffic on the Patton Ave / Bowen Bridge corridor and build a new French Broad crossing north to US 19/23/70.",
+        "sources": [
+          "https://www.bpr.org/growth-development/2026-04-24/ncdot-breaks-ground-on-long-awaited-interstate-26-connector-project-in-asheville",
+          "https://www.ncdot.gov/projects/asheville-i-26-connector/Pages/default.aspx"
+        ]
+      },
+      {
+        "name": "I-26 widening, Asheville (I-40) to Hendersonville",
+        "status": "July 17, 2026: all 4 westbound lanes open in final configuration from US 64 (Exit 49) to Brevard Rd (Exit 33). A short eastbound section is still 2 lanes. About 6 months of work remain west of the Blue Ridge Parkway bridge, with overnight closures for diamond grinding and markings. New Exit 35 (to Frederick Law Olmsted Way, built for the Pratt & Whitney plant) is due by end of 2026. Buncombe section completion: 'expected January 2027' (Jan 2026 report); NCDOT's June 2025 contract date was July 1, 2027. The Henderson County section is functionally complete.",
+        "sources": [
+          "https://wlos.com/news/local/i26-widening-project-westbound-lanes-open-asheville-henderson-buncombe-us-64-brevard-road-nc-department-transportation",
+          "https://www.ashevilledailyplanet.com/news/7533-i-26-widening-project-completition-date-changed-again-new-finish-date-expected-in-january-2027",
+          "https://avlwatchdog.org/opinion-enjoying-the-i-26-widening-project-great-because-it-wont-be-over-until-july-2027-if-it-stays-on-schedule/",
+          "https://www.hendersonvillelightning.com/news/14982-with-opening-of-new-lanes-i-26-in-county-is-functionally-complete.html"
+        ]
+      },
+      {
+        "name": "Helene road closures (2026)",
+        "status": "NCDOT (July 31, 2026): more than 99% of Helene-damaged roads have reopened. I found no specific Buncombe road still closed. The big remaining closures are outside the county but shape regional routing: (1) I-40 Pigeon River Gorge (Haywood County, toward Tennessee) runs one lane each way; $2.8B rebuild, target 2 EB + 1 WB lanes by late 2028 and completion late 2029; a 35 mph limit was reported. (2) Hickory Nut Gorge, US 64/US 74A toward Chimney Rock/Lake Lure, permanent repairs to 2029. (3) US 176 Saluda–Tryon closed until late 2029. All Blue Ridge Parkway sections in Buncombe were open as of Oct 6, 2026.",
+        "sources": [
+          "https://www.bpr.org/helene-recovery/2026-07-31/more-than-99-of-roads-damaged-by-helene-have-reopened-ncdot-says",
+          "https://www.wunc.org/2026-09-03/2-8-billion-pigeon-river-gorge-i-40-repairs-nearly-triple-original-estimate",
+          "https://www.nps.gov/blri/planyourvisit/roadclosures.htm"
+        ]
+      }
+    ],
+    "congestion": {
+      "tti_urban_mobility_report_2025": {
+        "area": "Asheville NC",
+        "annual_delay_per_auto_commuter_hours": {
+          "2024": 52,
+          "2023": 50
+        },
+        "annual_congestion_cost_per_auto_commuter_usd": {
+          "2024": 919,
+          "2023": 888
+        },
+        "source": "https://static.tti.tamu.edu/tti.tamu.edu/documents/umr/data/national/national-table-7.pdf"
+      },
+      "inrix_tomtom": "Asheville does not appear in the INRIX 2025 Global Traffic Scorecard report text (checked the PDF) or in TomTom's public ranking page. No Asheville-specific INRIX/TomTom index found.",
+      "peak_hour_factors": "Use NCDOT K (design-hour share of AADT) and D (directional split) from the segments layer: urban arterials K about 0.087–0.103, D about 0.52–0.62; interstates K about 0.078–0.099, D about 0.52–0.53 (values in aadt_values).",
+      "sources": [
+        "https://static.tti.tamu.edu/tti.tamu.edu/documents/umr/data/national/national-table-7.pdf",
+        "https://www.sipotra.it/wp-content/uploads/2026/04/2025-INRIX-Global-Traffic-Scorecard.pdf",
+        "https://www.tomtom.com/traffic-index/ranking/",
+        "https://services.arcgis.com/NuWFvHYDMVmmxMeM/arcgis/rest/services/NCDOT_2025_AADTandTrafficSegments_gdb/FeatureServer/0"
+      ]
+    }
+  },
+  "schools_check": {
+    "private_schools": [
+      {
+        "name": "Asheville School",
+        "address": "360 Asheville School Rd, Asheville, NC 28806",
+        "grades": "9–12 (boarding + day)",
+        "enrollment": "about 295 (NCES 2019 via Wikipedia); aggregators 263–300",
+        "enrollment_source": "Wikipedia/NCES 2019",
+        "lat": 35.56194,
+        "lon": -82.6225,
+        "coord_source": "Wikipedia coordinates (not in the NCES 2023-24 geocode file; no county point for 360)",
+        "notes": "300-acre campus; roughly 70–80% boarding.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Asheville_School",
+          "https://www.boardingschoolreview.com/asheville-school-profile"
+        ]
+      },
+      {
+        "name": "Christ School",
+        "address": "500 Christ School Rd, Arden, NC 28704",
+        "grades": "8–12 (boys, boarding/day)",
+        "enrollment": 301,
+        "enrollment_source": "NCES PSS 2023-24",
+        "lat": 35.465246,
+        "lon": -82.487702,
+        "coord_source": "NCES EDGE",
+        "notes": null,
+        "sources": [
+          "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A0502624",
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Private_School_Locations_Current/FeatureServer/0"
+        ]
+      },
+      {
+        "name": "Asheville Christian Academy",
+        "address": "74 Riverwood Rd, Swannanoa, NC 28778",
+        "grades": "PK–12",
+        "enrollment": 788,
+        "enrollment_source": "NCES PSS 2023-24",
+        "lat": 35.604755,
+        "lon": -82.410884,
+        "coord_source": "NCES EDGE",
+        "notes": null,
+        "sources": [
+          "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=01011576",
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Private_School_Locations_Current/FeatureServer/0"
+        ]
+      },
+      {
+        "name": "Rainbow Community School",
+        "address": "574 Haywood Rd, Asheville, NC 28806",
+        "grades": "PK–8",
+        "enrollment": 207,
+        "enrollment_source": "NCES PSS 2023-24",
+        "lat": 35.578169,
+        "lon": -82.586833,
+        "coord_source": "NCES EDGE",
+        "notes": "Current listings show 574 Haywood Rd; no State St campus found in current sources.",
+        "sources": [
+          "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A1302214",
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Private_School_Locations_Current/FeatureServer/0",
+          "https://rainbowcommunityschool.org/"
+        ]
+      },
+      {
+        "name": "Odyssey Community School",
+        "address": "90 Zillicoa St, Asheville, NC 28801",
+        "grades": "PK–12",
+        "enrollment": 138,
+        "enrollment_source": "NCES PSS 2023-24",
+        "lat": 35.610448,
+        "lon": -82.567548,
+        "coord_source": "NCES EDGE",
+        "notes": null,
+        "sources": [
+          "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A0902521",
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Private_School_Locations_Current/FeatureServer/0"
+        ]
+      },
+      {
+        "name": "Asheville Montessori School",
+        "address": "360 Weaverville Rd, Asheville, NC 28804",
+        "grades": "ages 3–6 (preschool/K)",
+        "enrollment": 72,
+        "enrollment_source": "school website (one campus)",
+        "lat": 35.662181,
+        "lon": -82.58275,
+        "coord_source": "county_address_points",
+        "notes": "Not in the NCES 2023-24 geocode file.",
+        "sources": [
+          "https://ashevillemontessorischool.com/about/our-school/",
+          "https://gis.buncombecounty.org/arcgis/rest/services/opendata/MapServer/2"
+        ]
+      },
+      {
+        "name": "Veritas Christian Academy",
+        "address": "17 Cane Creek Rd, Fletcher, NC 28732",
+        "grades": "per NCES",
+        "enrollment": null,
+        "enrollment_source": null,
+        "lat": 35.435688,
+        "lon": -82.500004,
+        "coord_source": "NCES EDGE",
+        "notes": "OUTSIDE Buncombe: NCES places it in Henderson County.",
+        "sources": [
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Private_School_Locations_Current/FeatureServer/0"
+        ]
+      },
+      {
+        "name": "Asheville Catholic School",
+        "address": "12 Culvern St, Asheville, NC 28804",
+        "grades": "PK–8",
+        "enrollment": 246,
+        "enrollment_source": "NCES PSS 2023-24",
+        "lat": 35.631201,
+        "lon": -82.551782,
+        "coord_source": "NCES EDGE",
+        "notes": null,
+        "sources": [
+          "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=01010754",
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Private_School_Locations_Current/FeatureServer/0"
+        ]
+      },
+      {
+        "name": "Hanger Hall School",
+        "address": "64 W.T. Weaver Blvd, Asheville, NC 28804",
+        "grades": "6–8 (girls)",
+        "enrollment": 83,
+        "enrollment_source": "NCES PSS 2023-24",
+        "lat": 35.614471,
+        "lon": -82.557862,
+        "coord_source": "NCES EDGE",
+        "notes": "Moved from the old Ben Lippen School Rd address to W.T. Weaver Blvd (former Girl Scouts site).",
+        "sources": [
+          "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=A0108265",
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Private_School_Locations_Current/FeatureServer/0",
+          "https://www.hangerhall.org/about/map-and-directions"
+        ]
+      },
+      {
+        "name": "Temple Baptist School",
+        "address": "76 Hawkins Ln, Asheville, NC 28806",
+        "grades": "PK–12",
+        "enrollment": 182,
+        "enrollment_source": "NCES PSS 2023-24",
+        "lat": 35.588045,
+        "lon": -82.590261,
+        "coord_source": "NCES EDGE",
+        "notes": "Still open: the website links a 2026-27 school calendar.",
+        "sources": [
+          "https://nces.ed.gov/surveys/pss/privateschoolsearch/school_detail.asp?Search=1&ID=02162252",
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Private_School_Locations_Current/FeatureServer/0",
+          "https://templebaptistschool.org/"
+        ]
+      }
+    ],
+    "public_high_schools": [
+      {
+        "name": "Asheville High School (Asheville City Schools)",
+        "address": "419 McDowell St, Asheville, NC 28803",
+        "grades": "9–12",
+        "enrollment": 1221,
+        "enrollment_source": "NCES CCD 2024-25",
+        "lat": 35.5729,
+        "lon": -82.5531,
+        "coord_source": "NCES EDGE 2024-25",
+        "notes": null,
+        "sources": [
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/School_Characteristics_Current/FeatureServer/1",
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Public_School_Locations_Current/FeatureServer/0"
+        ]
+      },
+      {
+        "name": "A.C. Reynolds High School",
+        "address": "1 Rocket Dr, Asheville, NC 28803",
+        "grades": "9–12",
+        "enrollment": 1169,
+        "enrollment_source": "NCES CCD 2024-25",
+        "lat": 35.5468,
+        "lon": -82.4771,
+        "coord_source": "NCES EDGE 2024-25",
+        "notes": null,
+        "sources": [
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/School_Characteristics_Current/FeatureServer/1",
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Public_School_Locations_Current/FeatureServer/0"
+        ]
+      },
+      {
+        "name": "T.C. Roberson High School",
+        "address": "250 Overlook Rd, Asheville, NC 28803",
+        "grades": "9–12",
+        "enrollment": 1479,
+        "enrollment_source": "NCES CCD 2024-25",
+        "lat": 35.4859,
+        "lon": -82.5351,
+        "coord_source": "NCES EDGE 2024-25",
+        "notes": "Largest of the seven.",
+        "sources": [
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/School_Characteristics_Current/FeatureServer/1",
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Public_School_Locations_Current/FeatureServer/0"
+        ]
+      },
+      {
+        "name": "Clyde A. Erwin High School",
+        "address": "60 Lees Creek Rd, Asheville, NC 28806",
+        "grades": "9–12",
+        "enrollment": 1013,
+        "enrollment_source": "NCES CCD 2024-25",
+        "lat": 35.6195,
+        "lon": -82.6264,
+        "coord_source": "NCES EDGE 2024-25",
+        "notes": null,
+        "sources": [
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/School_Characteristics_Current/FeatureServer/1",
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Public_School_Locations_Current/FeatureServer/0"
+        ]
+      },
+      {
+        "name": "Enka High School",
+        "address": "475 Enka Lake Rd, Candler, NC 28715",
+        "grades": "9–12",
+        "enrollment": 1051,
+        "enrollment_source": "NCES CCD 2024-25",
+        "lat": 35.5297,
+        "lon": -82.6658,
+        "coord_source": "NCES EDGE 2024-25",
+        "notes": null,
+        "sources": [
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/School_Characteristics_Current/FeatureServer/1",
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Public_School_Locations_Current/FeatureServer/0"
+        ]
+      },
+      {
+        "name": "North Buncombe High School",
+        "address": "890 Clarks Chapel Rd, Weaverville, NC 28787",
+        "grades": "9–12",
+        "enrollment": 896,
+        "enrollment_source": "NCES CCD 2024-25",
+        "lat": 35.7397,
+        "lon": -82.5576,
+        "coord_source": "NCES EDGE 2024-25",
+        "notes": null,
+        "sources": [
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/School_Characteristics_Current/FeatureServer/1",
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Public_School_Locations_Current/FeatureServer/0"
+        ]
+      },
+      {
+        "name": "Charles D. Owen High School",
+        "address": "99 Lake Eden Rd, Black Mountain, NC 28711",
+        "grades": "9–12",
+        "enrollment": 649,
+        "enrollment_source": "NCES CCD 2024-25",
+        "lat": 35.6189,
+        "lon": -82.3737,
+        "coord_source": "NCES EDGE 2024-25",
+        "notes": null,
+        "sources": [
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/School_Characteristics_Current/FeatureServer/1",
+          "https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Public_School_Locations_Current/FeatureServer/0"
+        ]
+      }
+    ]
+  }
+}

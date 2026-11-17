@@ -1,0 +1,130 @@
+/* Guided investigations, drawn inside the Questions panel. Uses the tokens from ui/styles.css. */
+.gd { display: grid; gap: 12px; align-content: start; }
+.gd svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.gd p, .gd-gal p { margin: 0; }
+.panel-body .gd p { color: var(--ink); font-size: 13.5px; line-height: 1.5; }
+.panel-body .gd p.note, .panel-body .gd .note { color: var(--ink-3); font-size: 12px; }
+
+/* Gallery ------------------------------------------------------------------------------------ */
+.gd-gal-h { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin: 2px 0 8px !important; }
+.gd-gal-count { color: var(--go); letter-spacing: 0.04em; }
+.gd-gal { display: grid; gap: 6px; }
+.gd-card {
+  display: flex; align-items: flex-start; gap: 10px; width: 100%; padding: 10px 11px; text-align: left; cursor: pointer;
+  border-radius: 10px; border: 1px solid var(--edge); background: rgba(255, 255, 255, 0.04); color: var(--ink); font: inherit;
+}
+.gd-card:hover { border-color: var(--lane); background: rgba(242, 194, 48, 0.08); }
+.gd-card .gd-ico {
+  flex: none; width: 34px; height: 34px; padding: 6px; border-radius: 8px; background: var(--sign); color: var(--sign-ink);
+  fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round;
+}
+.gd-card.is-done .gd-ico { background: rgba(58, 213, 140, 0.16); color: var(--go); }
+.gd-card-main { display: grid; gap: 4px; min-width: 0; }
+.gd-card-t { font: 700 13.5px/1.3 var(--font-ui); text-wrap: balance; }
+.gd-card-m { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 0; font-size: 11.5px; line-height: 1.35; color: var(--ink-3); }
+.gd-card-m > span + span::before { content: ''; display: inline-block; width: 3px; height: 3px; margin: 0 6px 2px; border-radius: 50%; background: currentColor; opacity: 0.7; }
+.gd-card-m > .gd-done, .gd-card-m > .gd-going { display: inline-flex; align-items: center; gap: 3px; font: 700 10.5px/1 var(--font-ui); letter-spacing: 0.06em; text-transform: uppercase; }
+.gd-done { color: var(--go); }
+.gd-done svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.gd-going { color: var(--lane); }
+
+/* Header of an open investigation -------------------------------------------------------------- */
+.gd-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.gd-back {
+  display: inline-flex; align-items: center; gap: 3px; height: 30px; padding: 0 9px 0 4px; margin-left: -4px; cursor: pointer;
+  border: 0; border-radius: var(--r-sm); background: none; color: var(--ink-2); font: 600 12.5px/1 var(--font-ui);
+}
+.gd-back:hover { color: var(--lane); background: rgba(255, 255, 255, 0.06); }
+.gd-back svg { width: 17px; height: 17px; }
+.gd-where { font: 700 10.5px/1 var(--font-ui); letter-spacing: 0.1em; text-transform: uppercase; color: var(--lane); white-space: nowrap; }
+.gd-title { margin: 0 !important; font: 800 18px/1.22 var(--font-sign); color: #fff; text-wrap: balance; }
+.gd-dots { display: flex; gap: 5px; margin: 0; padding: 0; list-style: none; }
+.gd-dots li { flex: 1; }
+.gd-dot {
+  display: block; width: 100%; height: 18px; padding: 0; border: 0; background: none; cursor: pointer; position: relative;
+}
+.gd-dot::before { content: ''; position: absolute; left: 0; right: 0; top: 7px; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, 0.14); }
+.gd-dot.is-seen::before { background: rgba(242, 194, 48, 0.5); }
+.gd-dot.is-on::before { background: var(--lane); top: 6px; height: 6px; border-radius: 3px; }
+.gd-dot:hover::before { background: #ffd24a; }
+
+/* Stage content ----------------------------------------------------------------------------------- */
+.gd-stage { display: grid; gap: 10px; align-content: start; }
+.gd-blurb { font-size: 14px !important; }
+.gd-meta { display: flex; flex-wrap: wrap; gap: 5px 6px; align-items: center; color: var(--ink-3) !important; font-size: 12px !important; }
+.gd-meta > span:first-child { margin-right: 2px; font-weight: 700; color: var(--ink-2); }
+.gd-tag { padding: 2px 7px 1px; border-radius: 999px; border: 1px solid var(--edge); font: 600 10.5px/1.5 var(--font-ui); color: var(--ink-2); white-space: nowrap; }
+.gd-box { display: grid; gap: 8px; padding: 11px 12px 12px; border-radius: var(--r-md); border: 1px solid var(--edge); background: rgba(255, 255, 255, 0.035); }
+.gd-box h4, .gd-step-t { margin: 0; font: 800 14.5px/1.25 var(--font-sign); color: #fff; }
+.gd-step-t { font-size: 16px; }
+.gd-predict { border-color: rgba(242, 194, 48, 0.35); background: rgba(242, 194, 48, 0.06); }
+.gd-limit { border-left: 3px solid var(--b-surveyed, #6cb6ff); }
+.gd-finish { border-color: rgba(58, 213, 140, 0.35); background: rgba(58, 213, 140, 0.06); }
+.gd-chips .chip { font-size: 12.5px; }
+.gd-lab { display: block; margin-top: 2px; font: 700 12.5px/1.35 var(--font-ui); color: var(--ink); }
+.gd-ta {
+  width: 100%; min-height: 54px; padding: 8px 10px; resize: vertical; border-radius: var(--r-sm); border: 1px solid var(--edge);
+  background: rgba(0, 0, 0, 0.3); color: var(--ink); font: 13.5px/1.45 var(--font-ui);
+}
+.gd-ta::placeholder { color: var(--ink-3); }
+.gd-ta:focus { outline: none; border-color: var(--lane); box-shadow: 0 0 0 1px var(--lane); }
+.gd-tools { display: flex; flex-wrap: wrap; gap: 6px; }
+.gd-tools .action, .gd-check .action, .gd-save, #gdShare { height: auto; min-height: 32px; padding: 6px 11px; line-height: 1.25; text-align: left; }
+.gd-run, .gd-next {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 40px; padding: 8px 14px; cursor: pointer;
+  border: 0; border-radius: var(--r-sm); background: var(--lane); color: var(--lane-ink); font: 800 13.5px/1.2 var(--font-ui); text-align: left;
+}
+.gd-run { justify-self: start; }
+.gd-run:hover, .gd-next:hover { background: #ffd24a; }
+.gd-run svg, .gd-next svg { flex: none; width: 17px; height: 17px; }
+.gd-run svg { fill: currentColor; stroke: none; }
+.gd-box .gd-run svg { fill: none; stroke: currentColor; }
+.gd-next:disabled { background: rgba(255, 255, 255, 0.1); color: var(--ink-3); cursor: not-allowed; }
+.gd-asked { padding-left: 9px; border-left: 2px solid var(--lane); color: var(--ink-2) !important; font-size: 12.5px !important; }
+.gd-asked.is-idle { border-left-color: var(--edge); color: var(--ink-3) !important; }
+.gd-ba { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.gd-ba span { padding: 7px 9px; border-radius: var(--r-sm); background: rgba(255, 255, 255, 0.05); border: 1px solid var(--edge); font-size: 11.5px; color: var(--ink-2); }
+.gd-ba b { display: block; margin-top: 2px; font: 700 14px/1.2 var(--font-data); color: var(--ink); }
+.gd-ba span + span b { color: var(--lane); }
+.gd-check { display: grid; gap: 7px; justify-items: start; padding: 10px 12px; border-radius: var(--r-sm); border: 1px dashed rgba(208, 222, 238, 0.28); }
+.gd-check h5 { margin: 0; font: 700 10.5px/1 var(--font-ui); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
+.gd-reveal { width: 100%; padding: 8px 10px; border-radius: var(--r-sm); background: rgba(58, 213, 140, 0.08); border: 1px solid rgba(58, 213, 140, 0.3); }
+.gd-reveal p b, .gd-find p b { color: #fff; }
+.gd-kv { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; margin: 0; font-size: 12.5px; }
+.gd-kv dt { color: var(--ink-2); }
+.gd-kv dd { margin: 0; font: 600 12.5px var(--font-data); color: var(--ink); text-align: right; }
+.gd-save { justify-self: start; display: inline-flex; align-items: center; gap: 6px; }
+.gd-save svg { width: 16px; height: 16px; flex: none; }
+.gd-save:disabled, #gdShare:disabled { color: var(--go); border-color: rgba(58, 213, 140, 0.35); background: rgba(58, 213, 140, 0.1); cursor: default; }
+.gd-q { color: var(--ink-2) !important; font-size: 12.5px !important; }
+.gd-mine { padding: 7px 10px; border-radius: var(--r-sm); background: rgba(242, 194, 48, 0.09); border-left: 3px solid var(--lane); font-weight: 600; }
+.gd-find { display: grid; gap: 6px; }
+.gd-find-row { display: grid; gap: 2px; padding: 7px 10px; border-radius: var(--r-sm); background: rgba(58, 213, 140, 0.08); border-left: 3px solid var(--go); }
+.gd-find-l { font: 700 10.5px/1.3 var(--font-ui); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); }
+.gd-starters { margin: 0; padding-left: 18px; display: grid; gap: 3px; font-size: 13px; line-height: 1.45; color: var(--ink); }
+.gd-follow { display: grid; gap: 6px; justify-items: start; }
+.gd-box .gd-card { background: rgba(0, 0, 0, 0.2); }
+
+.gd-ans { display: none; gap: 5px; justify-items: start; padding: 9px 11px; border-radius: var(--r-sm); background: rgba(242, 194, 48, 0.08); border: 1px solid rgba(242, 194, 48, 0.3); }
+.gd-ans b { font: 800 17px/1.2 var(--font-sign); color: #fff; }
+.gd-ans .action { height: auto; min-height: 32px; padding: 6px 11px; }
+/* On a narrow screen the panel covers the answer card, so the step carries the answer in brief. */
+@media (max-width: 860px) { .gd-ans { display: grid; } }
+
+/* Footer navigation --------------------------------------------------------------------------------- */
+.gd-nav { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-top: 10px; border-top: 1px solid var(--edge); }
+.gd-nav .action svg { width: 15px; height: 15px; }
+.gd-hint { color: var(--ink-3) !important; font-size: 12px !important; }
+.gd-hint[hidden] { display: none; }
+.gd-link { padding: 0; border: 0; background: none; color: var(--lane); font: inherit; text-decoration: underline; cursor: pointer; }
+
+@media (pointer: coarse) {
+  .gd-card, .gd-run, .gd-next, .gd-chips .chip, .gd-tools .action, .gd-save, .gd-check .action, .gd-back, .gd-ans .action, .gd-nav .action, #gdShare { min-height: 44px; }
+  .gd-dot { height: 30px; }
+  .gd-dot::before { top: 13px; }
+  .gd-dot.is-on::before { top: 12px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .gd-stage { animation: gd-in 0.22s ease; }
+  @keyframes gd-in { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+}
