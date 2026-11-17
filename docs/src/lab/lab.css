@@ -305,3 +305,4 @@ body.panel-open .legend { left: calc(var(--gutter) + var(--safe-l) + 462px); }
   .dock .seg-wx { display: none; }
   .fig-l { font-size: 12px; }
 }
+.rail-icon svg { width: 27px; height: 27px; }
